@@ -1,0 +1,1054 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/juri/ontologies/2021/8/untitled-ontology-2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/juri/ontologies/2021/8/untitled-ontology-2">
+    <Prefix name="" IRI="http://www.semanticweb.org/juri/ontologies/2021/8/untitled-ontology-2"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Allergy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Biking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cinema"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#City"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Constraint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cousine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CovidSymptom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Deficiency"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ElectricCar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FinancialConstraint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FoodItem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FoodPreference"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FoodStore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fruit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GasolineCar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HealthCondition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Impairment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Location"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Meal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Meat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Movie"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Neighbourhood"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NeighbourhoodConstraint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nutrient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ObligationsUser"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PainSymptom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pasta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PersonalConstraint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PersonalPreference"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Preference"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Protein"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Restaurant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RideSharing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SeaFood"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialPrefeence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TimePlaceObligation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Train"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TrainStation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Transportation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#User"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vegetable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vitamin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasConstraint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTrainStation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#inCousine"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#inFood"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#inRestaurant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ingredientOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#locatedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#partOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#residesIn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#area"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#carbonEmission"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cityName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#costTravel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#covid-19"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#degree"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#duration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#durationTravel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#electricChargingPoint"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#genreMovie"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#inhabitants"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#maximumDistance"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#neighbourhoodName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#place"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#proteinDeficiency"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#reason"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#restaurantName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#time"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#timeMovie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Alice"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Amsterdam"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Amsterdam_Centraal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Apple"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Banana"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BikingImpairment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Binnenstad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Chicken_Breast"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#City_Centre"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Escargot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fever"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FishAllergy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#French_Cousine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GlutenAllergy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Headache"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IronDeficiency"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Italian_Cousine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kebab"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Leidseplein"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LimitedBudget"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MuscleAche"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NoBikeLanes"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Noordoost"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ProteinDeficiency"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Quattro_Formaggi_Pizza"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ristorante_Italia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RunningNose"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Salad"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Salat_Nicoise"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sardines"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Science_Park"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Spaghetti"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Spaghetti_Bolognese"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tolsteeg"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Turkish_Cousine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Utrecht"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Utrecht_Centraal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WalkingImpairment"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Allergy"/>
+        <Class IRI="#HealthCondition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Biking"/>
+        <Class IRI="#Transportation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cinema"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#City"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#hasTrainStation"/>
+            <Class IRI="#TrainStation"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CovidSymptom"/>
+        <Class IRI="#HealthCondition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Deficiency"/>
+        <Class IRI="#HealthCondition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElectricCar"/>
+        <Class IRI="#Transportation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FinancialConstraint"/>
+        <Class IRI="#PersonalConstraint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FoodPreference"/>
+        <Class IRI="#Preference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FoodStore"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fruit"/>
+        <Class IRI="#FoodItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GasolineCar"/>
+        <Class IRI="#Transportation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HealthCondition"/>
+        <Class IRI="#Constraint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Impairment"/>
+        <Class IRI="#HealthCondition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Meat"/>
+        <Class IRI="#FoodItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Neighbourhood"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Neighbourhood"/>
+        <ObjectUnionOf>
+            <ObjectIntersectionOf>
+                <ObjectMinCardinality cardinality="1">
+                    <ObjectProperty IRI="#hasTrainStation"/>
+                </ObjectMinCardinality>
+                <DataSomeValuesFrom>
+                    <DataProperty IRI="#inhabitants"/>
+                    <DatatypeRestriction>
+                        <Datatype abbreviatedIRI="xsd:integer"/>
+                        <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20000</Literal>
+                        </FacetRestriction>
+                    </DatatypeRestriction>
+                </DataSomeValuesFrom>
+            </ObjectIntersectionOf>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#inhabitants"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20000</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectUnionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NeighbourhoodConstraint"/>
+        <Class IRI="#Constraint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PainSymptom"/>
+        <Class IRI="#CovidSymptom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pasta"/>
+        <Class IRI="#FoodItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PersonalConstraint"/>
+        <Class IRI="#Constraint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PersonalPreference"/>
+        <Class IRI="#PersonalConstraint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Protein"/>
+        <Class IRI="#Nutrient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Restaurant"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RideSharing"/>
+        <Class IRI="#Transportation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SeaFood"/>
+        <Class IRI="#FoodItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialPrefeence"/>
+        <Class IRI="#Preference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TimePlaceObligation"/>
+        <Class IRI="#PersonalConstraint"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Train"/>
+        <Class IRI="#Transportation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TrainStation"/>
+        <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vegetable"/>
+        <Class IRI="#FoodItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vitamin"/>
+        <Class IRI="#Nutrient"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#User"/>
+        <NamedIndividual IRI="#Alice"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#Amsterdam"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TrainStation"/>
+        <NamedIndividual IRI="#Amsterdam_Centraal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fruit"/>
+        <NamedIndividual IRI="#Apple"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fruit"/>
+        <NamedIndividual IRI="#Banana"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Impairment"/>
+        <NamedIndividual IRI="#BikingImpairment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Neighbourhood"/>
+        <NamedIndividual IRI="#Binnenstad"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Meat"/>
+        <NamedIndividual IRI="#Chicken_Breast"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Meal"/>
+        <NamedIndividual IRI="#Escargot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CovidSymptom"/>
+        <NamedIndividual IRI="#Fever"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Allergy"/>
+        <NamedIndividual IRI="#FishAllergy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cousine"/>
+        <NamedIndividual IRI="#French_Cousine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Allergy"/>
+        <NamedIndividual IRI="#GlutenAllergy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PainSymptom"/>
+        <NamedIndividual IRI="#Headache"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Deficiency"/>
+        <NamedIndividual IRI="#IronDeficiency"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cousine"/>
+        <NamedIndividual IRI="#Italian_Cousine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Meal"/>
+        <NamedIndividual IRI="#Kebab"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Neighbourhood"/>
+        <NamedIndividual IRI="#Leidseplein"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FinancialConstraint"/>
+        <NamedIndividual IRI="#LimitedBudget"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PainSymptom"/>
+        <NamedIndividual IRI="#MuscleAche"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NeighbourhoodConstraint"/>
+        <NamedIndividual IRI="#NoBikeLanes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Neighbourhood"/>
+        <NamedIndividual IRI="#Noordoost"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Deficiency"/>
+        <NamedIndividual IRI="#ProteinDeficiency"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Meal"/>
+        <NamedIndividual IRI="#Quattro_Formaggi_Pizza"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Restaurant"/>
+        <NamedIndividual IRI="#Ristorante_Italia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CovidSymptom"/>
+        <NamedIndividual IRI="#RunningNose"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vegetable"/>
+        <NamedIndividual IRI="#Salad"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Meal"/>
+        <NamedIndividual IRI="#Salat_Nicoise"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SeaFood"/>
+        <NamedIndividual IRI="#Sardines"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Neighbourhood"/>
+        <NamedIndividual IRI="#Science_Park"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pasta"/>
+        <NamedIndividual IRI="#Spaghetti"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Meal"/>
+        <NamedIndividual IRI="#Spaghetti_Bolognese"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Neighbourhood"/>
+        <NamedIndividual IRI="#Tolsteeg"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cousine"/>
+        <NamedIndividual IRI="#Turkish_Cousine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#Utrecht"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Impairment"/>
+        <NamedIndividual IRI="#WalkingImpairment"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#residesIn"/>
+        <NamedIndividual IRI="#Alice"/>
+        <NamedIndividual IRI="#Noordoost"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedIn"/>
+        <NamedIndividual IRI="#Binnenstad"/>
+        <NamedIndividual IRI="#Amsterdam"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTrainStation"/>
+        <NamedIndividual IRI="#City_Centre"/>
+        <NamedIndividual IRI="#Utrecht_Centraal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedIn"/>
+        <NamedIndividual IRI="#City_Centre"/>
+        <NamedIndividual IRI="#Utrecht"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inCousine"/>
+        <NamedIndividual IRI="#Escargot"/>
+        <NamedIndividual IRI="#French_Cousine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inRestaurant"/>
+        <NamedIndividual IRI="#French_Cousine"/>
+        <NamedIndividual IRI="#Ristorante_Italia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inRestaurant"/>
+        <NamedIndividual IRI="#Italian_Cousine"/>
+        <NamedIndividual IRI="#Ristorante_Italia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inCousine"/>
+        <NamedIndividual IRI="#Kebab"/>
+        <NamedIndividual IRI="#Turkish_Cousine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedIn"/>
+        <NamedIndividual IRI="#Leidseplein"/>
+        <NamedIndividual IRI="#Amsterdam"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedIn"/>
+        <NamedIndividual IRI="#Noordoost"/>
+        <NamedIndividual IRI="#Utrecht"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inCousine"/>
+        <NamedIndividual IRI="#Quattro_Formaggi_Pizza"/>
+        <NamedIndividual IRI="#Italian_Cousine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedIn"/>
+        <NamedIndividual IRI="#Ristorante_Italia"/>
+        <NamedIndividual IRI="#Science_Park"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inCousine"/>
+        <NamedIndividual IRI="#Salat_Nicoise"/>
+        <NamedIndividual IRI="#French_Cousine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedIn"/>
+        <NamedIndividual IRI="#Science_Park"/>
+        <NamedIndividual IRI="#Utrecht"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ingredientOf"/>
+        <NamedIndividual IRI="#Spaghetti"/>
+        <NamedIndividual IRI="#Spaghetti_Bolognese"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inCousine"/>
+        <NamedIndividual IRI="#Spaghetti_Bolognese"/>
+        <NamedIndividual IRI="#Italian_Cousine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedIn"/>
+        <NamedIndividual IRI="#Tolsteeg"/>
+        <NamedIndividual IRI="#Utrecht"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inRestaurant"/>
+        <NamedIndividual IRI="#Turkish_Cousine"/>
+        <NamedIndividual IRI="#Ristorante_Italia"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTrainStation"/>
+        <ObjectProperty IRI="#partOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#locatedIn"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#locatedIn"/>
+        <ObjectProperty IRI="#partOf"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasConstraint"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#inCousine"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#residesIn"/>
+    </FunctionalObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#inFood"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#inRestaurant"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#locatedIn"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#partOf"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasConstraint"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTrainStation"/>
+        <ObjectUnionOf>
+            <Class IRI="#City"/>
+            <Class IRI="#Neighbourhood"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#inCousine"/>
+        <Class IRI="#Cousine"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#inFood"/>
+        <Class IRI="#FoodItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#inRestaurant"/>
+        <Class IRI="#Restaurant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ingredientOf"/>
+        <Class IRI="#FoodItem"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#locatedIn"/>
+        <ObjectUnionOf>
+            <Class IRI="#Cinema"/>
+            <Class IRI="#Neighbourhood"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#residesIn"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasConstraint"/>
+        <Class IRI="#Constraint"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTrainStation"/>
+        <Class IRI="#TrainStation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#inCousine"/>
+        <Class IRI="#Meal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#inFood"/>
+        <ObjectUnionOf>
+            <Class IRI="#Fruit"/>
+            <Class IRI="#Meat"/>
+            <Class IRI="#Pasta"/>
+            <Class IRI="#SeaFood"/>
+            <Class IRI="#Vegetable"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#inRestaurant"/>
+        <Class IRI="#Cousine"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ingredientOf"/>
+        <Class IRI="#Meal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#locatedIn"/>
+        <ObjectUnionOf>
+            <Class IRI="#City"/>
+            <Class IRI="#Neighbourhood"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#residesIn"/>
+        <Class IRI="#Neighbourhood"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#maximumDistance"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#area"/>
+        <Class IRI="#Neighbourhood"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#carbonEmission"/>
+        <Class IRI="#Transportation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cityName"/>
+        <Class IRI="#City"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#costTravel"/>
+        <Class IRI="#Transportation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#covid-19"/>
+        <Class IRI="#HealthCondition"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#degree"/>
+        <Class IRI="#CovidSymptom"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#duration"/>
+        <ObjectUnionOf>
+            <Class IRI="#Movie"/>
+            <Class IRI="#Restaurant"/>
+            <Class IRI="#Transportation"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#durationTravel"/>
+        <Class IRI="#Transportation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#electricChargingPoint"/>
+        <Class IRI="#Neighbourhood"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#genreMovie"/>
+        <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#inhabitants"/>
+        <Class IRI="#Neighbourhood"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#maximumDistance"/>
+        <Class IRI="#Impairment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#neighbourhoodName"/>
+        <Class IRI="#Neighbourhood"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#place"/>
+        <Class IRI="#TimePlaceObligation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#proteinDeficiency"/>
+        <Class IRI="#HealthCondition"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#reason"/>
+        <Class IRI="#TimePlaceObligation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#restaurantName"/>
+        <Class IRI="#Restaurant"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#time"/>
+        <Class IRI="#TimePlaceObligation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#timeMovie"/>
+        <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#area"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#carbonEmission"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#cityName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#costTravel"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#covid-19"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#degree"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#duration"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#durationTravel"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#electricChargingPoint"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#genreMovie"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#inhabitants"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#maximumDistance"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#neighbourhoodName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#place"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#proteinDeficiency"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#reason"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#restaurantName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#time"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#timeMovie"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Allergy</IRI>
+        <Literal>Fish, Gluten</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CovidSymptom</IRI>
+        <Literal>Headache, fever etc</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Deficiency</IRI>
+        <Literal>Iron, Protein</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FinancialConstraint</IRI>
+        <Literal>&quot;Is trying to save money&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Impairment</IRI>
+        <Literal>&quot;Sits in a wheelchair&quot;, &quot;Vision Impaired&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LimitedBudget</IRI>
+        <Literal>Is trying to save money.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NeighbourhoodConstraint</IRI>
+        <Literal>Something like &quot;Dangerous Neighbourhood&quot;?</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SocialPrefeence</IRI>
+        <Literal>Wants to go out twice a week</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TimePlaceObligation</IRI>
+        <Literal>Bringing kids to school</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
