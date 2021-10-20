@@ -40,6 +40,9 @@
         <Class IRI="#Deficiency"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Documentary"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#ElectricCar"/>
     </Declaration>
     <Declaration>
@@ -53,6 +56,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#FoodStore"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FrenchMovie"/>
     </Declaration>
     <Declaration>
         <Class IRI="#GasolineCar"/>
@@ -103,10 +109,16 @@
         <Class IRI="#RideSharing"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#RomanticComedy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#SeaFood"/>
     </Declaration>
     <Declaration>
         <Class IRI="#SocialPrefeence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SuperheroMovie"/>
     </Declaration>
     <Declaration>
         <Class IRI="#TimePlaceObligation"/>
@@ -158,6 +170,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#residesIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sells"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#area"/>
@@ -214,9 +229,6 @@
         <DataProperty IRI="#time"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#timeMovie"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Alice"/>
     </Declaration>
     <Declaration>
@@ -233,6 +245,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Banana"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Batman"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#BeefMince"/>
@@ -271,6 +286,9 @@
         <NamedIndividual IRI="#Headache"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Holidate"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#IronDeficiency"/>
     </Declaration>
     <Declaration>
@@ -280,7 +298,16 @@
         <NamedIndividual IRI="#Lamb"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#LeMondeDeSilence"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Leidseplein"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LesMiserables"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LesMisérables"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LimitedBudget"/>
@@ -338,6 +365,12 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SpaghettiBolognese"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheIncredibles"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheSocialDilemma"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Tolsteeg"/>
@@ -408,6 +441,10 @@
         <Class IRI="#HealthConditionConstraint"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Documentary"/>
+        <Class IRI="#Movie"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ElectricCar"/>
         <Class IRI="#Transportation"/>
     </SubClassOf>
@@ -422,6 +459,10 @@
     <SubClassOf>
         <Class IRI="#FoodStore"/>
         <Class IRI="#Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FrenchMovie"/>
+        <Class IRI="#Movie"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#GasolineCar"/>
@@ -500,12 +541,20 @@
         <Class IRI="#Transportation"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#RomanticComedy"/>
+        <Class IRI="#Movie"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#SeaFood"/>
         <Class IRI="#FoodItem"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SocialPrefeence"/>
         <Class IRI="#PersonalPreference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SuperheroMovie"/>
+        <Class IRI="#Movie"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#TimePlaceObligation"/>
@@ -545,6 +594,10 @@
     <ClassAssertion>
         <Class IRI="#TrainStation"/>
         <NamedIndividual IRI="#Amsterdam_Centraal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SuperheroMovie"/>
+        <NamedIndividual IRI="#Batman"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Meat"/>
@@ -595,6 +648,10 @@
         <NamedIndividual IRI="#Headache"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#RomanticComedy"/>
+        <NamedIndividual IRI="#Holidate"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Deficiency"/>
         <NamedIndividual IRI="#IronDeficiency"/>
     </ClassAssertion>
@@ -607,8 +664,20 @@
         <NamedIndividual IRI="#Lamb"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Documentary"/>
+        <NamedIndividual IRI="#LeMondeDeSilence"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FrenchMovie"/>
+        <NamedIndividual IRI="#LeMondeDeSilence"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Neighbourhood"/>
         <NamedIndividual IRI="#Leidseplein"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FrenchMovie"/>
+        <NamedIndividual IRI="#LesMiserables"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#FinancialConstraint"/>
@@ -685,6 +754,18 @@
     <ClassAssertion>
         <Class IRI="#Meal"/>
         <NamedIndividual IRI="#SpaghettiBolognese"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RomanticComedy"/>
+        <NamedIndividual IRI="#TheIncredibles"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SuperheroMovie"/>
+        <NamedIndividual IRI="#TheIncredibles"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Documentary"/>
+        <NamedIndividual IRI="#TheSocialDilemma"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Neighbourhood"/>
@@ -912,6 +993,11 @@
         <NamedIndividual IRI="#Ratatouille"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#Batman"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">90</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#gramsOfProtein"/>
         <NamedIndividual IRI="#BeefMince"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">16</Literal>
@@ -927,9 +1013,24 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#Holidate"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">65</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#gramsOfProtein"/>
         <NamedIndividual IRI="#Lamb"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#LeMondeDeSilence"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#LesMiserables"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">120</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#gramsOfProtein"/>
@@ -960,6 +1061,16 @@
         <DataProperty IRI="#gramsOfProtein"/>
         <NamedIndividual IRI="#Spaghetti"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#TheIncredibles"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">75</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#TheSocialDilemma"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">60</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#gramsOfProtein"/>
@@ -1049,6 +1160,10 @@
         <ObjectProperty IRI="#residesIn"/>
         <Class IRI="#User"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sells"/>
+        <Class IRI="#FoodStore"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#containsVitamin"/>
         <Class IRI="#Vitamin"/>
@@ -1083,6 +1198,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#residesIn"/>
         <Class IRI="#Neighbourhood"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sells"/>
+        <Class IRI="#FoodItem"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="#gramsOfProtein"/>
@@ -1171,10 +1290,6 @@
         <DataProperty IRI="#time"/>
         <Class IRI="#TimePlaceObligation"/>
     </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#timeMovie"/>
-        <Class IRI="#Movie"/>
-    </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="#area"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
@@ -1246,10 +1361,6 @@
     <DataPropertyRange>
         <DataProperty IRI="#time"/>
         <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#timeMovie"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
