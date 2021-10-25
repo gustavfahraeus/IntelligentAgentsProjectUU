@@ -1,0 +1,15 @@
+#actions
+movies 1
+restaurant 1
+foodstore 0
+#user_pref
+climate 1
+bike 0
+#movie_pref
+scary 0.1
+french 0.1
+#restaurant_pref
+italian 0.7
+gluten 0
+protein max
+#foodstore_pref
