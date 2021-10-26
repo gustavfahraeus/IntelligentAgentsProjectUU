@@ -1,25 +1,20 @@
 from agent import Agent
-
-def get_scenario(i):
-    scenario = {}
-
-    filename = "scenarios/scenario{}.txt".format(i)
-    with open(filename) as f:
-        dic = ""
-        for line in f:
-            if "#" in line:
-                dic = line.strip()
-                scenario[dic] = {}
-            else:
-                (key, value) = line.split(" ")
-                scenario[dic][key] = value.strip()
-    
-    return scenario
+from scenarios import *
 
 def main():
     agent = Agent()
-    scenario = get_scenario(1)
-    print(scenario)
+    scenario = scenario1
+    options= {}
+
+    if scenario["actions"]["cinema"] == 1:
+        options["movies"] = agent.get_movies()
+
+    if scenario["actions"]["restaurant"] == 1:
+        options["restaurant"] = agent.get_restaurants(scenario)
+
+    if scenario["actions"]["foodstore"] == 1:
+        options["foodstore"] = agent.get_foodstores()
+
 
 if __name__ == "__main__":
     main()
