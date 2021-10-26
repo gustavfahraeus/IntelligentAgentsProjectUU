@@ -13,5 +13,22 @@ class Agent:
         with self.ontology:
             sync_reasoner()
 
+    def get_restaurants(self, sc):
+        options = {}
+
+        restaurants = self.ontology.search(type = self.ontology.Restaurant)
+        for res in restaurants:
+            utility = 1
+            for (key, value) in sc["#restaurant_pref"]:
+                if key in properties:
+                    utility *= value
+            
+            if utility != 0:
+                options[res] = utility
+        
+        return options
+
+
+
 
 
