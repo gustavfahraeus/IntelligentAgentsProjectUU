@@ -256,6 +256,9 @@
         <NamedIndividual IRI="#Banana"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Beulings"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#BikingImpairment"/>
     </Declaration>
     <Declaration>
@@ -295,6 +298,9 @@
         <NamedIndividual IRI="#Kebab"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#LeJardin"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Leidseplein"/>
     </Declaration>
     <Declaration>
@@ -310,13 +316,16 @@
         <NamedIndividual IRI="#Noordoost"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#PizzeriaOregano"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ProteinDeficiency"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Quattro_Formaggi_Pizza"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Ristorante_Italia"/>
+        <NamedIndividual IRI="#RistoranteItalia"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RunningNose"/>
@@ -340,7 +349,19 @@
         <NamedIndividual IRI="#Spaghetti_Bolognese"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#TasteOfRome"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheFrenchTable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheIstanbul"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Tolsteeg"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TurkishTaste"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Turkish_Cousine"/>
@@ -353,6 +374,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#WalkingImpairment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Yunak"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#Allergy"/>
@@ -534,6 +558,10 @@
         <NamedIndividual IRI="#Banana"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Restaurant"/>
+        <NamedIndividual IRI="#Beulings"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Impairment"/>
         <NamedIndividual IRI="#BikingImpairment"/>
     </ClassAssertion>
@@ -582,6 +610,10 @@
         <NamedIndividual IRI="#Kebab"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Restaurant"/>
+        <NamedIndividual IRI="#LeJardin"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Neighbourhood"/>
         <NamedIndividual IRI="#Leidseplein"/>
     </ClassAssertion>
@@ -602,6 +634,10 @@
         <NamedIndividual IRI="#Noordoost"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Restaurant"/>
+        <NamedIndividual IRI="#PizzeriaOregano"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Deficiency"/>
         <NamedIndividual IRI="#ProteinDeficiency"/>
     </ClassAssertion>
@@ -611,7 +647,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Restaurant"/>
-        <NamedIndividual IRI="#Ristorante_Italia"/>
+        <NamedIndividual IRI="#RistoranteItalia"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CovidSymptom"/>
@@ -642,8 +678,24 @@
         <NamedIndividual IRI="#Spaghetti_Bolognese"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Restaurant"/>
+        <NamedIndividual IRI="#TasteOfRome"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Restaurant"/>
+        <NamedIndividual IRI="#TheFrenchTable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Restaurant"/>
+        <NamedIndividual IRI="#TheIstanbul"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Neighbourhood"/>
         <NamedIndividual IRI="#Tolsteeg"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Restaurant"/>
+        <NamedIndividual IRI="#TurkishTaste"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Cousine"/>
@@ -656,6 +708,10 @@
     <ClassAssertion>
         <Class IRI="#Impairment"/>
         <NamedIndividual IRI="#WalkingImpairment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Restaurant"/>
+        <NamedIndividual IRI="#Yunak"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#residesIn"/>
@@ -685,12 +741,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inRestaurant"/>
         <NamedIndividual IRI="#French_Cousine"/>
-        <NamedIndividual IRI="#Ristorante_Italia"/>
+        <NamedIndividual IRI="#RistoranteItalia"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inRestaurant"/>
         <NamedIndividual IRI="#Italian_Cousine"/>
-        <NamedIndividual IRI="#Ristorante_Italia"/>
+        <NamedIndividual IRI="#RistoranteItalia"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inCousine"/>
@@ -714,7 +770,7 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
-        <NamedIndividual IRI="#Ristorante_Italia"/>
+        <NamedIndividual IRI="#RistoranteItalia"/>
         <NamedIndividual IRI="#Science_Park"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -745,7 +801,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inRestaurant"/>
         <NamedIndividual IRI="#Turkish_Cousine"/>
-        <NamedIndividual IRI="#Ristorante_Italia"/>
+        <NamedIndividual IRI="#RistoranteItalia"/>
     </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasTrainStation"/>
@@ -802,7 +858,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#inCousine"/>
-        <Class IRI="#Cousine"/>
+        <Class IRI="#Meal"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#inFood"/>
@@ -850,7 +906,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#inCousine"/>
-        <Class IRI="#Meal"/>
+        <Class IRI="#Cousine"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#inFood"/>
