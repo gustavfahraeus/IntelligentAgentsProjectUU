@@ -15,6 +15,7 @@ def main():
     if scenario["actions"]["foodstore"] == 1:
         options["foodstore"] = agent.get_foodstores()
 
+    print(options)
 
 if __name__ == "__main__":
     main()
