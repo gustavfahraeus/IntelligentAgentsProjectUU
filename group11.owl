@@ -265,6 +265,9 @@
         <DataProperty IRI="#timeMovie"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#AYollyOldTime"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Alice"/>
     </Declaration>
     <Declaration>
@@ -280,6 +283,9 @@
         <NamedIndividual IRI="#Banana"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Batman"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Beulings"/>
     </Declaration>
     <Declaration>
@@ -292,10 +298,19 @@
         <NamedIndividual IRI="#ChickenBreast"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#CitizenKane"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#CityCentre"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#CocaineCowboys"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Escargot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FearStreet"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Fever"/>
@@ -322,6 +337,12 @@
         <NamedIndividual IRI="#Kebab"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#KissingJessicaStein"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LaughsAndGaffs"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#LeJardin"/>
     </Declaration>
     <Declaration>
@@ -334,10 +355,16 @@
         <NamedIndividual IRI="#MuscleAche"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#MyBigFatGreekWeeding"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#NoBikeLanes"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Noordoost"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Parasite"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PizzeriaOregano"/>
@@ -364,6 +391,9 @@
         <NamedIndividual IRI="#Sardines"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Schumacher"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#SciencePark"/>
     </Declaration>
     <Declaration>
@@ -373,10 +403,22 @@
         <NamedIndividual IRI="#SpaghettiBolognese"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Spiderman"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#TasteOfRome"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#The400Blows"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheBoyBehindTheDoor"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#TheFrenchTable"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheIntouchables"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#TheIstanbul"/>
@@ -590,6 +632,10 @@
         <Class IRI="#Nutrient"/>
     </SubClassOf>
     <ClassAssertion>
+        <Class IRI="#ComedyMovie"/>
+        <NamedIndividual IRI="#AYollyOldTime"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#User"/>
         <NamedIndividual IRI="#Alice"/>
     </ClassAssertion>
@@ -610,6 +656,10 @@
         <NamedIndividual IRI="#Banana"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#SuperheroMovie"/>
+        <NamedIndividual IRI="#Batman"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Restaurant"/>
         <NamedIndividual IRI="#Beulings"/>
     </ClassAssertion>
@@ -626,8 +676,20 @@
         <NamedIndividual IRI="#ChickenBreast"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#DramaMovie"/>
+        <NamedIndividual IRI="#CitizenKane"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Documentary"/>
+        <NamedIndividual IRI="#CocaineCowboys"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Meal"/>
         <NamedIndividual IRI="#Escargot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ScaryMovie"/>
+        <NamedIndividual IRI="#FearStreet"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CovidSymptom"/>
@@ -662,6 +724,14 @@
         <NamedIndividual IRI="#Kebab"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#RomanticComedyMovie"/>
+        <NamedIndividual IRI="#KissingJessicaStein"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ComedyMovie"/>
+        <NamedIndividual IRI="#LaughsAndGaffs"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Restaurant"/>
         <NamedIndividual IRI="#LeJardin"/>
     </ClassAssertion>
@@ -678,12 +748,20 @@
         <NamedIndividual IRI="#MuscleAche"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#RomanticComedyMovie"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeeding"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#NeighbourhoodConstraint"/>
         <NamedIndividual IRI="#NoBikeLanes"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Neighbourhood"/>
         <NamedIndividual IRI="#Noordoost"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DramaMovie"/>
+        <NamedIndividual IRI="#Parasite"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Restaurant"/>
@@ -718,6 +796,10 @@
         <NamedIndividual IRI="#Sardines"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Documentary"/>
+        <NamedIndividual IRI="#Schumacher"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Neighbourhood"/>
         <NamedIndividual IRI="#SciencePark"/>
     </ClassAssertion>
@@ -730,12 +812,28 @@
         <NamedIndividual IRI="#SpaghettiBolognese"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#SuperheroMovie"/>
+        <NamedIndividual IRI="#Spiderman"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Restaurant"/>
         <NamedIndividual IRI="#TasteOfRome"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#FrenchMovie"/>
+        <NamedIndividual IRI="#The400Blows"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ScaryMovie"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoor"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Restaurant"/>
         <NamedIndividual IRI="#TheFrenchTable"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FrenchMovie"/>
+        <NamedIndividual IRI="#TheIntouchables"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Restaurant"/>
