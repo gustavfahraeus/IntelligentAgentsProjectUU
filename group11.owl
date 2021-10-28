@@ -346,6 +346,9 @@
         <NamedIndividual IRI="#ItalianCuisine"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Kinepolis"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#KissingJessicaStein"/>
     </Declaration>
     <Declaration>
@@ -415,6 +418,9 @@
         <NamedIndividual IRI="#RedLentils"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Rembrandt"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#RistoranteItalia"/>
     </Declaration>
     <Declaration>
@@ -470,6 +476,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#TurkishTaste"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tuschinski"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Utrecht"/>
@@ -782,6 +791,10 @@
         <NamedIndividual IRI="#ItalianCuisine"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Cinema"/>
+        <NamedIndividual IRI="#Kinepolis"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#RomanticComedyMovie"/>
         <NamedIndividual IRI="#KissingJessicaStein"/>
     </ClassAssertion>
@@ -874,6 +887,10 @@
         <NamedIndividual IRI="#RedLentils"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Cinema"/>
+        <NamedIndividual IRI="#Rembrandt"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Restaurant"/>
         <NamedIndividual IRI="#RistoranteItalia"/>
     </ClassAssertion>
@@ -948,6 +965,10 @@
     <ClassAssertion>
         <Class IRI="#Restaurant"/>
         <NamedIndividual IRI="#TurkishTaste"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cinema"/>
+        <NamedIndividual IRI="#Tuschinski"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#City"/>
@@ -1077,6 +1098,11 @@
         <NamedIndividual IRI="#RistoranteItalia"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedIn"/>
+        <NamedIndividual IRI="#Kinepolis"/>
+        <NamedIndividual IRI="#SciencePark"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inCuisine"/>
         <NamedIndividual IRI="#Köfte"/>
         <NamedIndividual IRI="#TurkishCuisine"/>
@@ -1185,6 +1211,11 @@
         <ObjectProperty IRI="#ingredientOf"/>
         <NamedIndividual IRI="#RedLentils"/>
         <NamedIndividual IRI="#ChorbaSoup"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedIn"/>
+        <NamedIndividual IRI="#Rembrandt"/>
+        <NamedIndividual IRI="#Binnenstad"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
@@ -1305,6 +1336,11 @@
         <ObjectProperty IRI="#servesCuisine"/>
         <NamedIndividual IRI="#TurkishTaste"/>
         <NamedIndividual IRI="#TurkishCuisine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedIn"/>
+        <NamedIndividual IRI="#Tuschinski"/>
+        <NamedIndividual IRI="#Leidseplein"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#containsVitamin"/>
