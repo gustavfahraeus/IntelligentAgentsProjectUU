@@ -118,9 +118,6 @@
         <Class IRI="#Preference"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Protein"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Restaurant"/>
     </Declaration>
     <Declaration>
@@ -439,6 +436,9 @@
         <NamedIndividual IRI="#UtrechtCentraal"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#VitaminC"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#WalkingImpairment"/>
     </Declaration>
     <Declaration>
@@ -578,10 +578,6 @@
     <SubClassOf>
         <Class IRI="#PersonalPreference"/>
         <Class IRI="#PersonalConstraint"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Protein"/>
-        <Class IRI="#Nutrient"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Restaurant"/>
@@ -856,6 +852,10 @@
         <NamedIndividual IRI="#Utrecht"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Vitamin"/>
+        <NamedIndividual IRI="#VitaminC"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Impairment"/>
         <NamedIndividual IRI="#WalkingImpairment"/>
     </ClassAssertion>
@@ -1039,14 +1039,59 @@
         <NamedIndividual IRI="#TurkishCuisine"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#AYollyOldTime"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#Batman"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">95</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#restaurantName"/>
         <NamedIndividual IRI="#Beulings"/>
         <Literal>Beulings</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#CitizenKane"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">180</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#CocaineCowboys"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">70</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#FearStreet"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">90</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#KissingJessicaStein"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#LaughsAndGaffs"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#restaurantName"/>
         <NamedIndividual IRI="#LeJardin"/>
         <Literal>Le Jardin</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeeding"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">90</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#Parasite"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">120</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#restaurantName"/>
@@ -1059,14 +1104,39 @@
         <Literal>Ristorante Italia</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#Schumacher"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">45</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#Spiderman"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">115</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#restaurantName"/>
         <NamedIndividual IRI="#TasteOfRome"/>
         <Literal>Taste of Rome</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#The400Blows"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">145</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoor"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">80</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#restaurantName"/>
         <NamedIndividual IRI="#TheFrenchTable"/>
         <Literal>The French Table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#duration"/>
+        <NamedIndividual IRI="#TheIntouchables"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">115</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#restaurantName"/>
