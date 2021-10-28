@@ -13,37 +13,49 @@ class Agent:
             sync_reasoner()
 
     def get_restaurants(self, sc):
-        options = {}
+        options = {"scores" : {}, "reasons": {}}
 
         restaurants = self.ontology.search(type = self.ontology.Restaurant)
         for res in restaurants:
             utility = 1
             reasons = []
+
+            #Check Cuisines
             for key, value in sc["restaurant_pref"]["cuisine"].items():
                 if key == "ItalianCuisine":
                     resI = self.ontology.search(servesCuisine = self.ontology.ItalianCuisine)
                     if res in list(resI):
                         new_utility = value * utility
                         if new_utility > utility:
-                            reasons.append("This restaurant has an Italian Cuisine")
+                            reasons.append(" - This restaurant has an Italian Cuisine")
+                        utility = new_utility
 
                 if key == "FrenchCuisine":
                     resF = self.ontology.search(servesCuisine = self.ontology.FrenchCuisine)
                     if res in list(resF):
                         new_utility *= value                        
                         if new_utility > utility:
-                            reasons.append("This restaurant has an French Cuisine")
+                            reasons.append(" - This restaurant has an French Cuisine")
+                        utility = new_utility
 
                 if key == "TurkishCuisine":
                     resT = self.ontology.search(servesCuisine = self.ontology.TurkishCuisine)
                     if res in list(resT):
                         new_utility *= value                        
                         if new_utility > utility:
-                            reasons.append("This restaurant has an Turkish Cuisine")
+                            reasons.append(" - This restaurant has an Turkish Cuisine")
+                        utility = new_utility
             
+
+            #Check allergy:
+            users = self.ontology.search(user = "*")
+            user = [u for u in users if u.name[0] == sc["user"]][0]
+            self.ontology.search(hasAllergy = "*")
+
             if utility != 0:
-                options[res]["scores"] = utility
-                options[res]["reasons"] = reasons
+                restaurant = res.restaurantName[0]
+                options["scores"][restaurant] = utility
+                options["reasons"][restaurant] = reasons
         
         return options
 

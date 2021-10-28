@@ -1038,6 +1038,51 @@
         <NamedIndividual IRI="#Yunak"/>
         <NamedIndividual IRI="#TurkishCuisine"/>
     </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#restaurantName"/>
+        <NamedIndividual IRI="#Beulings"/>
+        <Literal>Beulings</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#restaurantName"/>
+        <NamedIndividual IRI="#LeJardin"/>
+        <Literal>Le Jardin</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#restaurantName"/>
+        <NamedIndividual IRI="#PizzeriaOregano"/>
+        <Literal>Pizzaria Oregano</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#restaurantName"/>
+        <NamedIndividual IRI="#RistoranteItalia"/>
+        <Literal>Ristorante Italia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#restaurantName"/>
+        <NamedIndividual IRI="#TasteOfRome"/>
+        <Literal>Taste of Rome</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#restaurantName"/>
+        <NamedIndividual IRI="#TheFrenchTable"/>
+        <Literal>The French Table</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#restaurantName"/>
+        <NamedIndividual IRI="#TheIstanbul"/>
+        <Literal>The Istanbul</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#restaurantName"/>
+        <NamedIndividual IRI="#TurkishTaste"/>
+        <Literal>Turkisch Taste</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#restaurantName"/>
+        <NamedIndividual IRI="#Yunak"/>
+        <Literal>Yunak</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasTrainStation"/>
         <ObjectProperty IRI="#partOf"/>
