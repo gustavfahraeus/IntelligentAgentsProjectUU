@@ -16,9 +16,6 @@
         <Class IRI="#Allergy"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Biking"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Bread"/>
     </Declaration>
     <Declaration>
@@ -40,9 +37,6 @@
         <Class IRI="#Deficiency"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ElectricCar"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#FinancialConstraint"/>
     </Declaration>
     <Declaration>
@@ -53,9 +47,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#FoodStore"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#GasolineCar"/>
     </Declaration>
     <Declaration>
         <Class IRI="#HealthCondition"/>
@@ -463,6 +454,9 @@
         <NamedIndividual IRI="#UtrechtCentraal"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#VitaminA"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#VitaminC"/>
     </Declaration>
     <Declaration>
@@ -488,9 +482,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#VitaminB"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#VitaminD"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Ham"/>
@@ -545,10 +536,6 @@
         <Class IRI="#HealthCondition"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Biking"/>
-        <Class IRI="#Transportation"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Bread"/>
         <Class IRI="#FoodItem"/>
     </SubClassOf>
@@ -576,10 +563,6 @@
         <Class IRI="#HealthCondition"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ElectricCar"/>
-        <Class IRI="#Transportation"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#FinancialConstraint"/>
         <Class IRI="#PersonalConstraint"/>
     </SubClassOf>
@@ -590,10 +573,6 @@
     <SubClassOf>
         <Class IRI="#FoodStore"/>
         <Class IRI="#Location"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#GasolineCar"/>
-        <Class IRI="#Transportation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#HealthCondition"/>
@@ -812,6 +791,10 @@
         <NamedIndividual IRI="#Jumbo"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Cinema"/>
+        <NamedIndividual IRI="#Kinepolis"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Movie"/>
         <NamedIndividual IRI="#KissingJessicaStein"/>
     </ClassAssertion>
@@ -996,8 +979,20 @@
         <NamedIndividual IRI="#TurkishTaste"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Cinema"/>
+        <NamedIndividual IRI="#Tuschinski"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#City"/>
         <NamedIndividual IRI="#Utrecht"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vitamin"/>
+        <NamedIndividual IRI="#VitaminA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vitamin"/>
+        <NamedIndividual IRI="#VitaminB"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Vitamin"/>
@@ -1424,11 +1419,6 @@
         <ObjectProperty IRI="#locatedIn"/>
         <NamedIndividual IRI="#Tuschinski"/>
         <NamedIndividual IRI="#Leidseplein"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#containsVitamin"/>
-        <NamedIndividual IRI="#YellowOnion"/>
-        <NamedIndividual IRI="#VitaminD"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#ingredientOf"/>
