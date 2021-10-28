@@ -1025,7 +1025,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#nameMovie"/>
         <NamedIndividual IRI="#AYollyOldTime"/>
-        <Literal>AYollyOldTime</Literal>
+        <Literal>A Yolly Old Time</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#duration"/>
@@ -1080,7 +1080,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#nameMovie"/>
         <NamedIndividual IRI="#CitizenKane"/>
-        <Literal>CitizenKane</Literal>
+        <Literal>Citizen Kane</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#duration"/>
@@ -1095,7 +1095,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#nameMovie"/>
         <NamedIndividual IRI="#CocaineCowboys"/>
-        <Literal>CocaineCowboys</Literal>
+        <Literal>Cocaine Cowboys</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#duration"/>
@@ -1110,7 +1110,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#nameMovie"/>
         <NamedIndividual IRI="#FearStreet"/>
-        <Literal>FearStreet</Literal>
+        <Literal>Fear Street</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#duration"/>
@@ -1125,7 +1125,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#nameMovie"/>
         <NamedIndividual IRI="#KissingJessicaStein"/>
-        <Literal>KissingJessicaStein</Literal>
+        <Literal>Kissing Jessica Stein</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#duration"/>
@@ -1140,7 +1140,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#nameMovie"/>
         <NamedIndividual IRI="#LaughsAndGaffs"/>
-        <Literal>LaughsAndGaffs</Literal>
+        <Literal>Laughs And Gaffs</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#restaurantName"/>
@@ -1160,7 +1160,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#nameMovie"/>
         <NamedIndividual IRI="#MyBigFatGreekWeeding"/>
-        <Literal>MyBigFatGreekWeeding</Literal>
+        <Literal>My Big Fat Greek Weeding</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#duration"/>
@@ -1235,7 +1235,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#nameMovie"/>
         <NamedIndividual IRI="#The400Blows"/>
-        <Literal>The400Blows</Literal>
+        <Literal>The 400 Blows</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#duration"/>
@@ -1250,7 +1250,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#nameMovie"/>
         <NamedIndividual IRI="#TheBoyBehindTheDoor"/>
-        <Literal>TheBoyBehindTheDoor</Literal>
+        <Literal>The Boy Behind The Door</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#restaurantName"/>
@@ -1270,7 +1270,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#nameMovie"/>
         <NamedIndividual IRI="#TheIntouchables"/>
-        <Literal>TheIntouchables</Literal>
+        <Literal>The Intouchables</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#restaurantName"/>
