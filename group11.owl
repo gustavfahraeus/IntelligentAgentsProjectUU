@@ -88,19 +88,10 @@
         <Class IRI="#PersonalConstraint"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PersonalPreference"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Preference"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#PriceClass"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Restaurant"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SocialPrefeence"/>
     </Declaration>
     <Declaration>
         <Class IRI="#TimePlaceObligation"/>
@@ -122,6 +113,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#containsVitamin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#doesNotUseTransportation"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasConstraint"/>
@@ -556,7 +550,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FoodPreference"/>
-        <Class IRI="#Preference"/>
+        <Class IRI="#PersonalConstraint"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FoodStore"/>
@@ -623,16 +617,8 @@
         <Class IRI="#Constraint"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PersonalPreference"/>
-        <Class IRI="#PersonalConstraint"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Restaurant"/>
         <Class IRI="#Location"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#SocialPrefeence"/>
-        <Class IRI="#Preference"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#TimePlaceObligation"/>
@@ -1997,6 +1983,10 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
     </DataPropertyAssertion>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#doesNotUseTransportation"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasTrainStation"/>
         <ObjectProperty IRI="#partOf"/>
     </SubObjectPropertyOf>
@@ -2041,6 +2031,10 @@
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#sells"/>
     </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#doesNotUseTransportation"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasConstraint"/>
         <Class IRI="#User"/>
@@ -2104,6 +2098,10 @@
         <ObjectProperty IRI="#servesCuisine"/>
         <Class IRI="#Restaurant"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#doesNotUseTransportation"/>
+        <Class IRI="#Transportation"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasConstraint"/>
         <Class IRI="#Constraint"/>
@@ -2387,11 +2385,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#NeighbourhoodConstraint</IRI>
         <Literal>Something like &quot;Dangerous Neighbourhood&quot;?</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#SocialPrefeence</IRI>
-        <Literal>Wants to go out twice a week</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
