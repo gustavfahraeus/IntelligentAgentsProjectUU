@@ -88,9 +88,6 @@
         <Class IRI="#PersonalConstraint"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PriceClass"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Restaurant"/>
     </Declaration>
     <Declaration>
@@ -121,9 +118,6 @@
         <ObjectProperty IRI="#hasConstraint"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasPriceClass"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#hasTrainStation"/>
     </Declaration>
     <Declaration>
@@ -131,6 +125,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#inFood"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#inHasConstraint"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#inRestaurant"/>
@@ -158,6 +155,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#servesCuisine"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#servesMeal"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#area"/>
@@ -194,6 +194,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#gramsOfProteinPerMeal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasPriceClass"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#inhabitants"/>
@@ -685,10 +688,6 @@
         <NamedIndividual IRI="#Binnenstad"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#PriceClass"/>
-        <NamedIndividual IRI="#Cheap"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Meat"/>
         <NamedIndividual IRI="#Chicken"/>
     </ClassAssertion>
@@ -711,10 +710,6 @@
     <ClassAssertion>
         <Class IRI="#Transportation"/>
         <NamedIndividual IRI="#ElectricCar"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#PriceClass"/>
-        <NamedIndividual IRI="#Expensive"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Movie"/>
@@ -803,10 +798,6 @@
     <ClassAssertion>
         <Class IRI="#FinancialConstraint"/>
         <NamedIndividual IRI="#LimitedBudget"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#PriceClass"/>
-        <NamedIndividual IRI="#Moderate"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#PainSymptom"/>
@@ -973,11 +964,6 @@
         <NamedIndividual IRI="#Zucchini"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPriceClass"/>
-        <NamedIndividual IRI="#AlbertHeijn"/>
-        <NamedIndividual IRI="#Expensive"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
         <NamedIndividual IRI="#AlbertHeijn"/>
         <NamedIndividual IRI="#Binnenstad"/>
@@ -986,6 +972,16 @@
         <ObjectProperty IRI="#locatedIn"/>
         <NamedIndividual IRI="#AlbertHeijn"/>
         <NamedIndividual IRI="#Leidseplein"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasConstraint"/>
+        <NamedIndividual IRI="#Alice"/>
+        <NamedIndividual IRI="#BikingImpairment"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasConstraint"/>
+        <NamedIndividual IRI="#Alice"/>
+        <NamedIndividual IRI="#GlutenAllergy"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#residesIn"/>
@@ -1006,11 +1002,6 @@
         <ObjectProperty IRI="#ingredientOf"/>
         <NamedIndividual IRI="#BeefMince"/>
         <NamedIndividual IRI="#SpaghettiBolognese"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPriceClass"/>
-        <NamedIndividual IRI="#Beulings"/>
-        <NamedIndividual IRI="#Expensive"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
@@ -1063,11 +1054,6 @@
         <NamedIndividual IRI="#Ratatouille"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPriceClass"/>
-        <NamedIndividual IRI="#FrenchCuisine"/>
-        <NamedIndividual IRI="#Cheap"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inRestaurant"/>
         <NamedIndividual IRI="#FrenchCuisine"/>
         <NamedIndividual IRI="#RistoranteItalia"/>
@@ -1108,11 +1094,6 @@
         <NamedIndividual IRI="#RistoranteItalia"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPriceClass"/>
-        <NamedIndividual IRI="#Jumbo"/>
-        <NamedIndividual IRI="#Moderate"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
         <NamedIndividual IRI="#Jumbo"/>
         <NamedIndividual IRI="#Noordoost"/>
@@ -1121,11 +1102,6 @@
         <ObjectProperty IRI="#locatedIn"/>
         <NamedIndividual IRI="#Jumbo"/>
         <NamedIndividual IRI="#SciencePark"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPriceClass"/>
-        <NamedIndividual IRI="#Kinepolis"/>
-        <NamedIndividual IRI="#Cheap"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
@@ -1168,11 +1144,6 @@
         <NamedIndividual IRI="#Lasagna"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPriceClass"/>
-        <NamedIndividual IRI="#LeJardin"/>
-        <NamedIndividual IRI="#Moderate"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
         <NamedIndividual IRI="#LeJardin"/>
         <NamedIndividual IRI="#Binnenstad"/>
@@ -1198,11 +1169,6 @@
         <NamedIndividual IRI="#Schwarma"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPriceClass"/>
-        <NamedIndividual IRI="#Lidl"/>
-        <NamedIndividual IRI="#Cheap"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
         <NamedIndividual IRI="#Lidl"/>
         <NamedIndividual IRI="#Tolsteeg"/>
@@ -1226,11 +1192,6 @@
         <ObjectProperty IRI="#ingredientOf"/>
         <NamedIndividual IRI="#PizzaDough"/>
         <NamedIndividual IRI="#Pizza"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPriceClass"/>
-        <NamedIndividual IRI="#PizzeriaOregano"/>
-        <NamedIndividual IRI="#Cheap"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
@@ -1273,19 +1234,9 @@
         <NamedIndividual IRI="#Kofte"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPriceClass"/>
-        <NamedIndividual IRI="#Rembrandt"/>
-        <NamedIndividual IRI="#Moderate"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
         <NamedIndividual IRI="#Rembrandt"/>
         <NamedIndividual IRI="#Binnenstad"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPriceClass"/>
-        <NamedIndividual IRI="#RistoranteItalia"/>
-        <NamedIndividual IRI="#Expensive"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
@@ -1318,11 +1269,6 @@
         <NamedIndividual IRI="#ItalianCuisine"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPriceClass"/>
-        <NamedIndividual IRI="#TasteOfRome"/>
-        <NamedIndividual IRI="#Moderate"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
         <NamedIndividual IRI="#TasteOfRome"/>
         <NamedIndividual IRI="#TasteOfRome"/>
@@ -1341,11 +1287,6 @@
         <ObjectProperty IRI="#servesCuisine"/>
         <NamedIndividual IRI="#TheFrenchTable"/>
         <NamedIndividual IRI="#FrenchCuisine"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPriceClass"/>
-        <NamedIndividual IRI="#TheIstanbul"/>
-        <NamedIndividual IRI="#Moderate"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
@@ -1398,11 +1339,6 @@
         <NamedIndividual IRI="#RistoranteItalia"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPriceClass"/>
-        <NamedIndividual IRI="#TurkishTaste"/>
-        <NamedIndividual IRI="#Cheap"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
         <NamedIndividual IRI="#TurkishTaste"/>
         <NamedIndividual IRI="#Noordoost"/>
@@ -1411,11 +1347,6 @@
         <ObjectProperty IRI="#servesCuisine"/>
         <NamedIndividual IRI="#TurkishTaste"/>
         <NamedIndividual IRI="#TurkishCuisine"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPriceClass"/>
-        <NamedIndividual IRI="#Tuschinski"/>
-        <NamedIndividual IRI="#Moderate"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
@@ -1431,11 +1362,6 @@
         <ObjectProperty IRI="#ingredientOf"/>
         <NamedIndividual IRI="#YellowOnion"/>
         <NamedIndividual IRI="#OnionSoup"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasPriceClass"/>
-        <NamedIndividual IRI="#Yunak"/>
-        <NamedIndividual IRI="#Expensive"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
@@ -1483,6 +1409,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#userName"/>
+        <NamedIndividual IRI="#Alice"/>
+        <Literal>Alice</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#duration"/>
         <NamedIndividual IRI="#Batman"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">95</Literal>
@@ -1526,6 +1457,11 @@
         <DataProperty IRI="#gramsOfProteinPerMeal"/>
         <NamedIndividual IRI="#BeefMince"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPriceClass"/>
+        <NamedIndividual IRI="#Beulings"/>
+        <Literal>Expensive</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#restaurantName"/>
@@ -1728,6 +1664,11 @@
         <Literal>Laughs And Gaffs</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasPriceClass"/>
+        <NamedIndividual IRI="#LeJardin"/>
+        <Literal>Moderate</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#restaurantName"/>
         <NamedIndividual IRI="#LeJardin"/>
         <Literal>Le Jardin</Literal>
@@ -1788,6 +1729,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasPriceClass"/>
+        <NamedIndividual IRI="#PizzeriaOregano"/>
+        <Literal>Cheap</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#restaurantName"/>
         <NamedIndividual IRI="#PizzeriaOregano"/>
         <Literal>Pizzaria Oregano</Literal>
@@ -1831,6 +1777,11 @@
         <DataProperty IRI="#sameNeighbourhoodDuration"/>
         <NamedIndividual IRI="#RideSharing"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPriceClass"/>
+        <NamedIndividual IRI="#RistoranteItalia"/>
+        <Literal>Moderate</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#restaurantName"/>
@@ -1878,6 +1829,11 @@
         <Literal>Spiderman</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasPriceClass"/>
+        <NamedIndividual IRI="#TasteOfRome"/>
+        <Literal>Cheap</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#restaurantName"/>
         <NamedIndividual IRI="#TasteOfRome"/>
         <Literal>Taste of Rome</Literal>
@@ -1913,6 +1869,11 @@
         <Literal>The Boy Behind The Door</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasPriceClass"/>
+        <NamedIndividual IRI="#TheFrenchTable"/>
+        <Literal>Expensive</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#restaurantName"/>
         <NamedIndividual IRI="#TheFrenchTable"/>
         <Literal>The French Table</Literal>
@@ -1931,6 +1892,11 @@
         <DataProperty IRI="#nameMovie"/>
         <NamedIndividual IRI="#TheIntouchables"/>
         <Literal>The Intouchables</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPriceClass"/>
+        <NamedIndividual IRI="#TheIstanbul"/>
+        <Literal>Cheap</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#restaurantName"/>
@@ -1963,9 +1929,19 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#hasPriceClass"/>
+        <NamedIndividual IRI="#TurkishTaste"/>
+        <Literal>Cheap</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#restaurantName"/>
         <NamedIndividual IRI="#TurkishTaste"/>
         <Literal>Turkisch Taste</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasPriceClass"/>
+        <NamedIndividual IRI="#Yunak"/>
+        <Literal>Moderate</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#restaurantName"/>
@@ -1995,12 +1971,17 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#hasConstraint"/>
+        <ObjectProperty IRI="#inHasConstraint"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#inCuisine"/>
+        <ObjectProperty IRI="#servesMeal"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#locatedIn"/>
         <ObjectProperty IRI="#partOf"/>
     </InverseObjectProperties>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#hasConstraint"/>
-    </FunctionalObjectProperty>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#inCuisine"/>
     </FunctionalObjectProperty>
@@ -2038,14 +2019,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasConstraint"/>
         <Class IRI="#User"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasPriceClass"/>
-        <ObjectUnionOf>
-            <Class IRI="#Cinema"/>
-            <Class IRI="#FoodStore"/>
-            <Class IRI="#Restaurant"/>
-        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasTrainStation"/>
@@ -2150,6 +2123,9 @@
         <Class IRI="#Cuisine"/>
     </ObjectPropertyRange>
     <FunctionalDataProperty>
+        <DataProperty IRI="#hasPriceClass"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
         <DataProperty IRI="#maximumDistance"/>
     </FunctionalDataProperty>
     <DataPropertyDomain>
@@ -2202,6 +2178,14 @@
     <DataPropertyDomain>
         <DataProperty IRI="#genreMovie"/>
         <Class IRI="#Movie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasPriceClass"/>
+        <ObjectUnionOf>
+            <Class IRI="#Cinema"/>
+            <Class IRI="#FoodStore"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#inhabitants"/>
@@ -2297,6 +2281,10 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#genreMovie"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasPriceClass"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>

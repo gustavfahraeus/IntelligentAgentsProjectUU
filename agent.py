@@ -12,6 +12,10 @@ class Agent:
         with self.ontology:
             sync_reasoner()
 
+    def get_user(self, name):
+        self.user = self.ontology.search(type = self.ontology.User, userName = name)[0]
+        self.constraints = self.user.hasConstraint
+
     def get_restaurants(self, sc):
         options = {"scores" : {}, "good_reasons": {}, "bad_reasons": {}}
 
@@ -22,10 +26,10 @@ class Agent:
             bad_reasons = []
 
             #Check Cuisines
+            cuisine = res.servesCuisine
             for key, value in sc["restaurant_pref"]["cuisine"].items():
                 if key == "ItalianCuisine":
-                    resI = self.ontology.search(servesCuisine = self.ontology.ItalianCuisine)
-                    if res in list(resI):
+                    if cuisine == self.ontology.ItalianCuisine:
                         new_utility = value * utility
                         if new_utility > utility:
                             good_reasons.append(" - This restaurant has an Italian Cuisine")
@@ -34,8 +38,7 @@ class Agent:
                         utility = new_utility
 
                 if key == "FrenchCuisine":
-                    resF = self.ontology.search(servesCuisine = self.ontology.FrenchCuisine)
-                    if res in list(resF):
+                    if cuisine == self.ontology.FrenchCuisine:
                         new_utility *= value                        
                         if new_utility > utility:
                             good_reasons.append(" - This restaurant has an French Cuisine")
@@ -44,8 +47,7 @@ class Agent:
                         utility = new_utility
 
                 if key == "TurkishCuisine":
-                    resT = self.ontology.search(servesCuisine = self.ontology.TurkishCuisine)
-                    if res in list(resT):
+                    if cuisine == self.ontology.TurkishCuisine:
                         new_utility *= value                        
                         if new_utility > utility:
                             good_reasons.append(" - This restaurant has an Turkish Cuisine")
@@ -55,13 +57,34 @@ class Agent:
             
 
             #Check allergy
-            #users = self.ontology.search(user = "*")
-            #user = [u for u in users if u.name[0] == sc["user"]][0]
-            #print(self.ontology.search(hasAllergy = "*"))
+            #allergies = self.ontology.search(type = self.ontology.Allergy, inHasConstraint = self.user)            
 
             #Check nutrients
 
             #Check pricerange
+            pricerange = res.hasPriceClass 
+            if sc["restaurant_pref"]["pricerange"] == pricerange:
+                utility *= 1.2
+                good_reasons.append(" - This restaurant is in the {} pricerange".format(pricerange))
+            else:
+                utility *= 0.8
+                bad_reasons.append(" - This restaurant is in the {} pricerange".format(pricerange))
+
+
+            #Check co2
+            #if sc["climate"]:
+            #    meals_co2 = []
+            #    for meal in cuisine.servesMeal:
+            #        co2 = 0
+            #        for ing in cuisine.hasIngredient:
+            #            co2 += ing.carbonFootprint
+            #        meals_co2.append(co2)
+            #   if sc["climate"] > min(meals_co2):
+            #       utility *= 1.5
+            #       good_reasons.append(" - This restaurant serves at least one meal with an acceptable carbon footprint")
+            #   else:
+            #       utility *= 0.5
+            #       bad_reasons.append(" - This restaurant serves no meals with acceptable caron footprints")
 
             if utility != 0:
                 restaurant = res.restaurantName[0]
@@ -83,8 +106,8 @@ class Agent:
             bad_reasons = []
 
             #Check genre
-            for genre, value in sc["movie_pref"]["genre"]:
-                if movie.genre[0] == genre:
+            for genre, value in sc["movie_pref"]["genre"].items():
+                if movie.genreMovie[0] == genre:
                     new_utility = utility * value
                     if new_utility > utility:
                         good_reasons.append(" - This movie is a {}".format(genre))
@@ -121,6 +144,9 @@ class Agent:
                 options["scores"][movie_name] = utility
                 options["good_reasons"][movie_name] = good_reasons
                 options["bad_reasons"][movie_name] = bad_reasons
+        
+
+        return options
 
 
 

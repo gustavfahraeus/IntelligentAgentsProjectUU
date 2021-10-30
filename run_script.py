@@ -7,6 +7,8 @@ def main():
     scenario = scenario1
     actions = {}
 
+    agent.get_user(scenario["user"])
+
     if scenario["actions"]["cinema"] == 1:
         actions["movie"] = agent.get_movies(scenario)
 
@@ -19,15 +21,25 @@ def main():
     for action, options in actions.items():
         scores = options["scores"]
         #Change to top 3!
-        max_value = max(scores.values())
-        good_options = [option for option, score in scores.items() if score == max_value]
+        good_options = sorted(scores, key=scores.get, reverse=True)[:2]
         
-        for suggestion in good_options:
-            print("A good {} is {}, because:".format(action, suggestion))
-            print(*options["good_reasons"][suggestion], sep = "\n")
-            if options["bad_reasons"][suggestion]:
-                print("But it is not a perfect option, because:")
-                print(*options["bad_reasons"][suggestion], sep = "\n")
+        print("The best {} is {}".format(action, good_options[0]))
+        if options["good_reasons"][good_options[0]]:
+            print("Reasons for this {} are:".format(action))
+            print(*options["good_reasons"][good_options[0]], sep = "\n")
+        if options["bad_reasons"][good_options[0]]:
+            print("But it is not a perfect option, because:")
+            print(*options["bad_reasons"][good_options[0]], sep = "\n")
+        
+        print("\n")
+
+        print("An alternative {} is {}".format(action, good_options[1]))
+        if options["good_reasons"][good_options[1]]:
+            print("Reasons for this {} are:".format(action))
+            print(*options["good_reasons"][good_options[1]], sep = "\n")
+        if options["bad_reasons"][good_options[1]]:
+            print("But it is not a perfect option, because:")
+            print(*options["bad_reasons"][good_options[1]], sep = "\n")
 
 if __name__ == "__main__":
     main()
