@@ -20,26 +20,28 @@ def main():
 
     for action, options in actions.items():
         scores = options["scores"]
-        #Change to top 3!
         good_options = sorted(scores, key=scores.get, reverse=True)[:2]
-        
-        print("The best {} is {}".format(action, good_options[0]))
-        if options["good_reasons"][good_options[0]]:
-            print("Reasons for this {} are:".format(action))
-            print(*options["good_reasons"][good_options[0]], sep = "\n")
-        if options["bad_reasons"][good_options[0]]:
-            print("But it is not a perfect option, because:")
-            print(*options["bad_reasons"][good_options[0]], sep = "\n")
-        
-        print("\n")
 
-        print("An alternative {} is {}".format(action, good_options[1]))
-        if options["good_reasons"][good_options[1]]:
-            print("Reasons for this {} are:".format(action))
-            print(*options["good_reasons"][good_options[1]], sep = "\n")
-        if options["bad_reasons"][good_options[1]]:
-            print("But it is not a perfect option, because:")
-            print(*options["bad_reasons"][good_options[1]], sep = "\n")
+        if good_options:        
+            print("The best {} is {}".format(action, good_options[0]))
+            if options["good_reasons"][good_options[0]]:
+                print("Reasons for this {} are:".format(action))
+                print(*options["good_reasons"][good_options[0]], sep = "\n")
+            if options["bad_reasons"][good_options[0]]:
+                print("But it is not a perfect option, because:")
+                print(*options["bad_reasons"][good_options[0]], sep = "\n")
+
+            print("\n")
+
+            print("An alternative {} is {}".format(action, good_options[1]))
+            if options["good_reasons"][good_options[1]]:
+                print("Reasons for this {} are:".format(action))
+                print(*options["good_reasons"][good_options[1]], sep = "\n")
+            if options["bad_reasons"][good_options[1]]:
+                print("But it is not a perfect option, because:")
+                print(*options["bad_reasons"][good_options[1]], sep = "\n")
+        else:
+            print("There are no good options for your preferences")
 
 if __name__ == "__main__":
     main()

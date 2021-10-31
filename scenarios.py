@@ -1,5 +1,6 @@
 scenario1 = {   "user": "Alice",
-                "climate": 10,
+                "climate": 20,
+                "transport": 20,
                 "actions": {"cinema" : 0, "restaurant" : 1, "foodstore" : 0},
                 "movie_pref": 
                     {   "genre": {"scary": 0.2, "french": 0.7, "romantic": 2, "comedy": 0.6, "drama": 0.7},

@@ -1,5 +1,6 @@
 from owlready2 import *
 from pprint import pprint
+import operator
 owlready2.JAVA_EXE = "C:/Users/xelfj/Downloads/Protege-5.5.0-win/Protege-5.5.0/jre/bin/java.exe" # Change this to whatever on your own system. Don't know how to work around this yet.
 
 # We are developing a utility based Agent.
@@ -18,7 +19,15 @@ class Agent:
 
     def get_restaurants(self, sc):
         options = {"scores" : {}, "good_reasons": {}, "bad_reasons": {}}
-
+        
+        climate = sc["climate"]
+        neigh = self.user.residesIn
+        city = neigh.locatedIn
+        max_duration = sc["transport"]
+        poss_transports = self.ontology.search(type = self.ontology.Transportation)
+        if (self.ontology.BikingImpairment in self.constraints):
+            poss_transports.remove(self.ontology.Biking)
+        
         restaurants = self.ontology.search(type = self.ontology.Restaurant)
         for res in restaurants:
             utility = 1
@@ -54,10 +63,6 @@ class Agent:
                         if new_utility < utility:
                             good_reasons.append(" - This restaurant has an Turkish Cuisine")
                         utility = new_utility
-            
-
-            #Check allergy
-            #allergies = self.ontology.search(type = self.ontology.Allergy, inHasConstraint = self.user)            
 
             #Check nutrients
 
@@ -71,23 +76,105 @@ class Agent:
                 bad_reasons.append(" - This restaurant is in the {} pricerange".format(pricerange))
 
 
-            #Check co2
-            #if sc["climate"]:
-            #    meals_co2 = []
-            #    for meal in cuisine.servesMeal:
-            #        co2 = 0
-            #        for ing in cuisine.hasIngredient:
-            #            co2 += ing.carbonFootprint
-            #        meals_co2.append(co2)
-            #   if sc["climate"] > min(meals_co2):
-            #       utility *= 1.5
-            #       good_reasons.append(" - This restaurant serves at least one meal with an acceptable carbon footprint")
-            #   else:
-            #       utility *= 0.5
-            #       bad_reasons.append(" - This restaurant serves no meals with acceptable caron footprints")
+            #Check co2 and allergies of meals
+            if climate:
+                meals_co2 = []
+                meals_allergy = []
+                for meal in cuisine.servesMeal:
+                    co2 = 0
+                    meal_contain = False
+                    for ing in meal.hasIngredient:
+                        if ing.carbonFootprint: #change this in ontology so every ingredient has an carbonFootprint
+                            co2 += ing.carbonFootprint
+                        if ing.containsAllergy:
+                            for allergy in ing.containsAllergy:
+                                if allergy in self.constraints:
+                                    meal_contain = True
+                           
+                    meals_co2.append(co2)
+                    meals_allergy.append(meal_contain)
+
+                if climate > min(meals_co2):
+                   utility *= 1.5
+                   good_reasons.append(" - This restaurant serves at least one meal with an acceptable carbon footprint")
+                else:
+                   utility *= 0.5
+                   bad_reasons.append(" - This restaurant serves no meals with acceptable caron footprints")
+                
+                if meals_allergy:
+                    if all(meals_allergy):
+                        print(res)
+                        utility = 0
+                    else:
+                        good_reasons.append(" - This restaurant can handle your allergy")
+                
+            
+
+            #Check transportation  
+            score_transports = {}          
+            score_transports["score"] = {}
+            score_transports["reason"] = {}
+            if neigh in res.locatedIn:
+                #same neighbourhood
+                for transport in poss_transports:
+                    if transport.sameNeighbourhoodDuration:
+                        if (max_duration < transport.sameNeighbourhoodDuration) & (climate > transport.carbonFootprint):
+                            score_transports["score"][transport] = 1.5
+                            score_transports["reason"][transport] = " - You can {} to this restaurant".format(transport.action)
+                        elif climate > transport.carbonFootprint:
+                            score_transports["score"][transport] = 0.8
+                            score_transports["reason"][transport] = " - You can {} to this restaurant, but it takes {} minutes".format(transport.action, transport.sameNeighbourhoodDuration)
+                        elif  max_duration < transport.sameNeighbourhoodDuration:
+                            score_transports["score"][transport] = 0.8
+                            score_transports["reason"][transport] = " - You can {} to this restaurant, but it has a carbon footprint of {}".format(transport.action, transport.carbonFootprint)         
+
+            elif city in res.locatedIn:
+                #same city
+                for transport in poss_transports:
+                    if transport.sameCityDuration:
+                        if (max_duration < transport.sameCityDuration) & (climate > transport.carbonFootprint):
+                            score_transports["score"][transport] = 1.5
+                            score_transports["reason"][transport] = " - You can {} to this restaurant".format(transport.action)
+                        elif climate > transport.carbonFootprint:
+                            score_transports["score"][transport] = 0.8
+                            score_transports["reason"][transport] = " - You can {} to this restaurant, but it takes {} minutes".format(transport.action, transport.sameCityDuration)
+                        elif  max_duration < transport.sameCityDuration:
+                            score_transports["score"][transport] = 0.8
+                            score_transports["reason"][transport] = " - You can {} to this restaurant, but it has a carbon footprint of {}".format(transport.action, transport.carbonFootprint)         
+
+            else:
+                #other city
+                for transport in poss_transports:
+                    if transport.otherCityDuration:
+                        if (max_duration < transport.otherCityDuration) & (climate > transport.carbonFootprint):
+                            score_transports["score"][transport] = 1.5
+                            score_transports["reason"][transport] = " - You can {} to this restaurant".format(transport.action)
+                        elif climate > transport.carbonFootprint:
+                            score_transports["score"][transport] = 0.8
+                            score_transports["reason"][transport] = " - You can {} to this restaurant, but it takes {} minutes".format(transport.action, transport.otherCityDuration)
+                        elif  max_duration < transport.otherCityDuration:
+                            score_transports["score"][transport] = 0.8
+                            score_transports["reason"][transport] = " - You can {} to this restaurant, but it has a carbon footprint of {}".format(transport.action, transport.carbonFootprint)         
+            
+            if score_transports["score"]:
+                max_uti = max(score_transports["score"].values())
+                max_transports = [trans for (trans, score) in score_transports["score"].items() if score == max_uti]
+                new_utility = utility*max_uti
+                if new_utility > utility:
+                    for trans in max_transports:
+                        good_reasons.append(score_transports["reason"][trans])
+                else:
+                    for trans in max_transports:
+                        bad_reasons.append(score_transports["reason"][trans])
+                utility = new_utility
+            else:
+                utility = 0
+
+
+
 
             if utility != 0:
-                restaurant = res.restaurantName[0]
+                restaurant = res.restaurantName
                 options["scores"][restaurant] = utility
                 options["good_reasons"][restaurant] = good_reasons
                 options["bad_reasons"][restaurant] = bad_reasons

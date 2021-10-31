@@ -109,6 +109,9 @@
         <Class IRI="#Vitamin"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#containsAllergy"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#containsVitamin"/>
     </Declaration>
     <Declaration>
@@ -116,6 +119,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasConstraint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasIngredient"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasTrainStation"/>
@@ -160,6 +166,9 @@
         <ObjectProperty IRI="#servesMeal"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#action"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#area"/>
     </Declaration>
     <Declaration>
@@ -182,9 +191,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#duration"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#durationTravel"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#electricChargingPoint"/>
@@ -616,6 +622,13 @@
         <Class IRI="#FoodItem"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Pasta"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#containsAllergy"/>
+            <NamedIndividual IRI="#GlutenAllergy"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#PersonalConstraint"/>
         <Class IRI="#Constraint"/>
     </SubClassOf>
@@ -1139,6 +1152,11 @@
         <NamedIndividual IRI="#ItalianCuisine"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsAllergy"/>
+        <NamedIndividual IRI="#LasagnaSheet"/>
+        <NamedIndividual IRI="#GlutenAllergy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#ingredientOf"/>
         <NamedIndividual IRI="#LasagnaSheet"/>
         <NamedIndividual IRI="#Lasagna"/>
@@ -1257,6 +1275,11 @@
         <ObjectProperty IRI="#locatedIn"/>
         <NamedIndividual IRI="#SciencePark"/>
         <NamedIndividual IRI="#Utrecht"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsAllergy"/>
+        <NamedIndividual IRI="#Spaghetti"/>
+        <NamedIndividual IRI="#GlutenAllergy"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#ingredientOf"/>
@@ -1469,6 +1492,11 @@
         <Literal>Beulings</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#action"/>
+        <NamedIndividual IRI="#Biking"/>
+        <Literal>bike</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#carbonFootprint"/>
         <NamedIndividual IRI="#Biking"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
@@ -1534,6 +1562,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#action"/>
+        <NamedIndividual IRI="#ElectricCar"/>
+        <Literal>drive with electric car</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#carbonFootprint"/>
         <NamedIndividual IRI="#ElectricCar"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
@@ -1577,6 +1610,11 @@
         <DataProperty IRI="#gramsOfProteinPerMeal"/>
         <NamedIndividual IRI="#Garlic"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#action"/>
+        <NamedIndividual IRI="#GasolineCar"/>
+        <Literal>drive with gasoline car</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#carbonFootprint"/>
@@ -1759,6 +1797,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#action"/>
+        <NamedIndividual IRI="#RideSharing"/>
+        <Literal>ride share</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#carbonFootprint"/>
         <NamedIndividual IRI="#RideSharing"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">30</Literal>
@@ -1914,6 +1957,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#action"/>
+        <NamedIndividual IRI="#Train"/>
+        <Literal>go with the train</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#carbonFootprint"/>
         <NamedIndividual IRI="#Train"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
@@ -1975,6 +2023,10 @@
         <ObjectProperty IRI="#inHasConstraint"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#hasIngredient"/>
+        <ObjectProperty IRI="#ingredientOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#inCuisine"/>
         <ObjectProperty IRI="#servesMeal"/>
     </InverseObjectProperties>
@@ -2012,6 +2064,10 @@
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#sells"/>
     </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#containsAllergy"/>
+        <Class IRI="#FoodItem"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#doesNotUseTransportation"/>
         <Class IRI="#User"/>
@@ -2072,6 +2128,10 @@
         <Class IRI="#Restaurant"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#containsAllergy"/>
+        <Class IRI="#Allergy"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#doesNotUseTransportation"/>
         <Class IRI="#Transportation"/>
     </ObjectPropertyRange>
@@ -2123,11 +2183,78 @@
         <Class IRI="#Cuisine"/>
     </ObjectPropertyRange>
     <FunctionalDataProperty>
+        <DataProperty IRI="#action"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#area"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#carbonFootprint"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#cityName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#costTravel"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#covid-19"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#dayScheduleMovie"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#degree"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#duration"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#electricChargingPoint"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#genreMovie"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
         <DataProperty IRI="#hasPriceClass"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#inhabitants"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#maximumDistance"/>
     </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#nameMovie"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#neighbourhoodName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#otherCityDuration"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#place"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#reason"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#restaurantName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#sameCityDuration"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#sameNeighbourhoodDuration"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#userName"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#action"/>
+        <Class IRI="#Transportation"/>
+    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#area"/>
         <Class IRI="#Neighbourhood"/>
@@ -2166,10 +2293,6 @@
             <Class IRI="#Restaurant"/>
             <Class IRI="#Transportation"/>
         </ObjectUnionOf>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#durationTravel"/>
-        <Class IRI="#Transportation"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#electricChargingPoint"/>
@@ -2240,6 +2363,10 @@
         <Class IRI="#User"/>
     </DataPropertyDomain>
     <DataPropertyRange>
+        <DataProperty IRI="#action"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#area"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
@@ -2269,10 +2396,6 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#duration"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#durationTravel"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
     <DataPropertyRange>
