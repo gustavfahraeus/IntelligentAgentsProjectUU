@@ -76,9 +76,6 @@
         <Class IRI="#NeighbourhoodConstraint"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ObligationsUser"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#PainSymptom"/>
     </Declaration>
     <Declaration>
