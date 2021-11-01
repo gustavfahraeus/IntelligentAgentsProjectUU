@@ -2197,12 +2197,12 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#dayScheduleMovie"/>
         <NamedIndividual IRI="#KissingJessicaSteinSA21"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
+        <Literal>saturday</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#dayScheduleMovie"/>
+        <DataProperty IRI="#scheduleMovieTime"/>
         <NamedIndividual IRI="#KissingJessicaSteinSA21"/>
-        <Literal>saturday</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#dayScheduleMovie"/>
@@ -2280,14 +2280,14 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#scheduleMovieTime"/>
+        <DataProperty IRI="#dayScheduleMovie"/>
         <NamedIndividual IRI="#LaughsAndGaffsSN16"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+        <Literal>sunday</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#scheduleMovieTime"/>
         <NamedIndividual IRI="#LaughsAndGaffsSN16"/>
-        <Literal>sunday</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#dayScheduleMovie"/>
@@ -2447,12 +2447,12 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#dayScheduleMovie"/>
         <NamedIndividual IRI="#ParasiteSN21"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
+        <Literal>sunday</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="#dayScheduleMovie"/>
+        <DataProperty IRI="#scheduleMovieTime"/>
         <NamedIndividual IRI="#ParasiteSN21"/>
-        <Literal>sunday</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#dayScheduleMovie"/>
