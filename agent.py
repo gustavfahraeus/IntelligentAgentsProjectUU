@@ -15,18 +15,17 @@ class Agent:
 
     def get_user(self, name):
         self.user = self.ontology.search(type = self.ontology.User, userName = name)[0]
-        self.constraints = self.user.hasConstraint
+        self.constraints = self.user.hasConstraint        
+        self.neigh = self.user.residesIn
+        self.city = self.neigh.locatedIn
+        self.poss_transports = self.ontology.search(type = self.ontology.Transportation)        
+        if (self.ontology.BikingImpairment in self.constraints):
+            self.poss_transports.remove(self.ontology.Biking)
 
     def get_restaurants(self, sc):
         options = {"scores" : {}, "good_reasons": {}, "bad_reasons": {}}
         
-        climate = sc["climate"]
-        neigh = self.user.residesIn
-        city = neigh.locatedIn
-        max_duration = sc["transport"]
-        poss_transports = self.ontology.search(type = self.ontology.Transportation)
-        if (self.ontology.BikingImpairment in self.constraints):
-            poss_transports.remove(self.ontology.Biking)
+        climate = sc["climate"]        
         
         restaurants = self.ontology.search(type = self.ontology.Restaurant)
         for res in restaurants:
@@ -111,51 +110,7 @@ class Agent:
             
 
             #Check transportation  
-            score_transports = {}          
-            score_transports["score"] = {}
-            score_transports["reason"] = {}
-            if neigh in res.locatedIn:
-                #same neighbourhood
-                for transport in poss_transports:
-                    if transport.sameNeighbourhoodDuration:
-                        if (max_duration < transport.sameNeighbourhoodDuration) & (climate > transport.carbonFootprint):
-                            score_transports["score"][transport] = 1.5
-                            score_transports["reason"][transport] = " - You can {} to this restaurant".format(transport.action)
-                        elif climate > transport.carbonFootprint:
-                            score_transports["score"][transport] = 0.8
-                            score_transports["reason"][transport] = " - You can {} to this restaurant, but it takes {} minutes".format(transport.action, transport.sameNeighbourhoodDuration)
-                        elif  max_duration < transport.sameNeighbourhoodDuration:
-                            score_transports["score"][transport] = 0.8
-                            score_transports["reason"][transport] = " - You can {} to this restaurant, but it has a carbon footprint of {}".format(transport.action, transport.carbonFootprint)         
-
-            elif city in res.locatedIn:
-                #same city
-                for transport in poss_transports:
-                    if transport.sameCityDuration:
-                        if (max_duration < transport.sameCityDuration) & (climate > transport.carbonFootprint):
-                            score_transports["score"][transport] = 1.5
-                            score_transports["reason"][transport] = " - You can {} to this restaurant".format(transport.action)
-                        elif climate > transport.carbonFootprint:
-                            score_transports["score"][transport] = 0.8
-                            score_transports["reason"][transport] = " - You can {} to this restaurant, but it takes {} minutes".format(transport.action, transport.sameCityDuration)
-                        elif  max_duration < transport.sameCityDuration:
-                            score_transports["score"][transport] = 0.8
-                            score_transports["reason"][transport] = " - You can {} to this restaurant, but it has a carbon footprint of {}".format(transport.action, transport.carbonFootprint)         
-
-            else:
-                #other city
-                for transport in poss_transports:
-                    if transport.otherCityDuration:
-                        if (max_duration < transport.otherCityDuration) & (climate > transport.carbonFootprint):
-                            score_transports["score"][transport] = 1.5
-                            score_transports["reason"][transport] = " - You can {} to this restaurant".format(transport.action)
-                        elif climate > transport.carbonFootprint:
-                            score_transports["score"][transport] = 0.8
-                            score_transports["reason"][transport] = " - You can {} to this restaurant, but it takes {} minutes".format(transport.action, transport.otherCityDuration)
-                        elif  max_duration < transport.otherCityDuration:
-                            score_transports["score"][transport] = 0.8
-                            score_transports["reason"][transport] = " - You can {} to this restaurant, but it has a carbon footprint of {}".format(transport.action, transport.carbonFootprint)         
-            
+            score_transports = self.check_transportation(sc["transport"], climate, res)            
             if score_transports["score"]:
                 max_uti = max(score_transports["score"].values())
                 max_transports = [trans for (trans, score) in score_transports["score"].items() if score == max_uti]
@@ -235,16 +190,50 @@ class Agent:
 
         return options
 
+    def check_transportation(self, max_duration, climate, location):   
+        score_transports = {}          
+        score_transports["score"] = {}
+        score_transports["reason"] = {}
 
-
-
-            
-
-
-
-
-
-
-
-
-
+        if self.neigh in location:
+            #same neighbourhood
+            for transport in self.poss_transports:
+                if transport.sameNeighbourhoodDuration:
+                    if (max_duration < transport.sameNeighbourhoodDuration) & (climate > transport.carbonFootprint):
+                        score_transports["score"][transport] = 1.5
+                        score_transports["reason"][transport] = " - You can {} to this restaurant".format(transport.action)
+                    elif climate > transport.carbonFootprint:
+                        score_transports["score"][transport] = 0.8
+                        score_transports["reason"][transport] = " - You can {} to this restaurant, but it takes {} minutes".format(transport.action, transport.sameNeighbourhoodDuration)
+                    elif  max_duration < transport.sameNeighbourhoodDuration:
+                        score_transports["score"][transport] = 0.8
+                        score_transports["reason"][transport] = " - You can {} to this restaurant, but it has a carbon footprint of {}".format(transport.action, transport.carbonFootprint)                  
+                        
+        elif self.city in location:
+            #same city
+            for transport in self.poss_transports:
+                if transport.sameCityDuration:
+                    if (max_duration < transport.sameCityDuration) & (climate > transport.carbonFootprint):
+                        score_transports["score"][transport] = 1.5
+                        score_transports["reason"][transport] = " - You can {} to this restaurant".format(transport.action)
+                    elif climate > transport.carbonFootprint:
+                        score_transports["score"][transport] = 0.8
+                        score_transports["reason"][transport] = " - You can {} to this restaurant, but it takes {} minutes".format(transport.action, transport.sameCityDuration)
+                    elif  max_duration < transport.sameCityDuration:
+                        score_transports["score"][transport] = 0.8
+                        score_transports["reason"][transport] = " - You can {} to this restaurant, but it has a carbon footprint of {}".format(transport.action, transport.carbonFootprint)
+        else:
+            #other city
+            for transport in self.poss_transports:
+                if transport.otherCityDuration:
+                    if (max_duration < transport.otherCityDuration) & (climate > transport.carbonFootprint):
+                        score_transports["score"][transport] = 1.5
+                        score_transports["reason"][transport] = " - You can {} to this restaurant".format(transport.action)
+                    elif climate > transport.carbonFootprint:
+                        score_transports["score"][transport] = 0.8
+                        score_transports["reason"][transport] = " - You can {} to this restaurant, but it takes {} minutes".format(transport.action, transport.otherCityDuration)
+                    elif  max_duration < transport.otherCityDuration:
+                        score_transports["score"][transport] = 0.8
+                        score_transports["reason"][transport] = " - You can {} to this restaurant, but it has a carbon footprint of {}".format(transport.action, transport.carbonFootprint)         
+        
+        return score_transports
