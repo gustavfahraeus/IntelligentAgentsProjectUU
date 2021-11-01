@@ -7,6 +7,6 @@ scenario1 = {   "user": "Alice",
                         "date": {"Tuesday": 1.5, 1900: 2}, 
                         "duration": "long"},
                 "restaurant_pref": 
-                    {   "cuisine": {"ItalianCuisine" : 1.5}, 
+                    {   "cuisine": {"ItalianCuisine" : 1.5, "FrenchCuisine" : 0.5, "TurkishCuisine": 0.5}, 
                         "pricerange": "Moderate",
                         "food": {"protein": 1.5}        }   }

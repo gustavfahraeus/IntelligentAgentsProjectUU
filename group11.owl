@@ -109,6 +109,9 @@
         <Class IRI="#Vitamin"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#VitaminDeficiency"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#containsAllergy"/>
     </Declaration>
     <Declaration>
@@ -143,6 +146,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#locatedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#needsVitamin"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#partOf"/>
@@ -221,9 +227,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#place"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#proteinDeficiency"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#reason"/>
@@ -673,6 +676,9 @@
         <NamedIndividual IRI="#VitaminB"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#VitaminBDeficiency"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#VitaminC"/>
     </Declaration>
     <Declaration>
@@ -691,6 +697,13 @@
     <SubClassOf>
         <Class IRI="#Bread"/>
         <Class IRI="#FoodItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bread"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#containsAllergy"/>
+            <NamedIndividual IRI="#GlutenAllergy"/>
+        </ObjectHasValue>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Cinema"/>
@@ -809,6 +822,10 @@
     <SubClassOf>
         <Class IRI="#Vegetable"/>
         <Class IRI="#FoodItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VitaminDeficiency"/>
+        <Class IRI="#Deficiency"/>
     </SubClassOf>
     <ClassAssertion>
         <Class IRI="#Movie"/>
@@ -1343,6 +1360,10 @@
         <NamedIndividual IRI="#VitaminB"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#VitaminDeficiency"/>
+        <NamedIndividual IRI="#VitaminBDeficiency"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Vitamin"/>
         <NamedIndividual IRI="#VitaminC"/>
     </ClassAssertion>
@@ -1373,6 +1394,11 @@
         <ObjectProperty IRI="#hasConstraint"/>
         <NamedIndividual IRI="#Alice"/>
         <NamedIndividual IRI="#GlutenAllergy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasConstraint"/>
+        <NamedIndividual IRI="#Alice"/>
+        <NamedIndividual IRI="#VitaminBDeficiency"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#residesIn"/>
@@ -1530,11 +1556,6 @@
         <NamedIndividual IRI="#ItalianCuisine"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#containsAllergy"/>
-        <NamedIndividual IRI="#LasagnaSheet"/>
-        <NamedIndividual IRI="#GlutenAllergy"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#ingredientOf"/>
         <NamedIndividual IRI="#LasagnaSheet"/>
         <NamedIndividual IRI="#Lasagna"/>
@@ -1583,6 +1604,11 @@
         <ObjectProperty IRI="#inCuisine"/>
         <NamedIndividual IRI="#Pizza"/>
         <NamedIndividual IRI="#ItalianCuisine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsAllergy"/>
+        <NamedIndividual IRI="#PizzaDough"/>
+        <NamedIndividual IRI="#GlutenAllergy"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#ingredientOf"/>
@@ -1653,11 +1679,6 @@
         <ObjectProperty IRI="#locatedIn"/>
         <NamedIndividual IRI="#SciencePark"/>
         <NamedIndividual IRI="#Utrecht"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#containsAllergy"/>
-        <NamedIndividual IRI="#Spaghetti"/>
-        <NamedIndividual IRI="#GlutenAllergy"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#ingredientOf"/>
@@ -1753,6 +1774,11 @@
         <ObjectProperty IRI="#locatedIn"/>
         <NamedIndividual IRI="#Tuschinski"/>
         <NamedIndividual IRI="#Leidseplein"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#needsVitamin"/>
+        <NamedIndividual IRI="#VitaminBDeficiency"/>
+        <NamedIndividual IRI="#VitaminB"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#ingredientOf"/>
@@ -2956,6 +2982,9 @@
         <ObjectProperty IRI="#inCuisine"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
+        <ObjectProperty IRI="#needsVitamin"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
         <ObjectProperty IRI="#residesIn"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
@@ -3026,6 +3055,10 @@
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#needsVitamin"/>
+        <Class IRI="#Deficiency"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#presentingMovie"/>
         <Class IRI="#MovieProgram"/>
     </ObjectPropertyDomain>
@@ -3081,6 +3114,10 @@
         </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#needsVitamin"/>
+        <Class IRI="#Vitamin"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#presentingMovie"/>
         <Class IRI="#Movie"/>
     </ObjectPropertyRange>
@@ -3132,6 +3169,9 @@
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#genreMovie"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#gramsOfProteinPerMeal"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasPriceClass"/>
@@ -3221,6 +3261,10 @@
         <Class IRI="#Movie"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#gramsOfProteinPerMeal"/>
+        <Class IRI="#FoodItem"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasPriceClass"/>
         <ObjectUnionOf>
             <Class IRI="#Cinema"/>
@@ -3247,10 +3291,6 @@
     <DataPropertyDomain>
         <DataProperty IRI="#place"/>
         <Class IRI="#TimePlaceObligation"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#proteinDeficiency"/>
-        <Class IRI="#HealthCondition"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#reason"/>
@@ -3325,6 +3365,10 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#gramsOfProteinPerMeal"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasPriceClass"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -3347,10 +3391,6 @@
     <DataPropertyRange>
         <DataProperty IRI="#place"/>
         <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#proteinDeficiency"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#reason"/>

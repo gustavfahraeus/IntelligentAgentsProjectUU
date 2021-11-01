@@ -11,7 +11,7 @@ class Agent:
         self.ontology = get_ontology('./group11.owl').load()
 
         with self.ontology:
-            sync_reasoner()
+            sync_reasoner(infer_property_values=True)
 
     def get_user(self, name):
         self.user = self.ontology.search(type = self.ontology.User, userName = name)[0]
@@ -47,7 +47,7 @@ class Agent:
 
                 if key == "FrenchCuisine":
                     if cuisine == self.ontology.FrenchCuisine:
-                        new_utility *= value                        
+                        new_utility = value * utility                      
                         if new_utility > utility:
                             good_reasons.append(" - This restaurant has an French Cuisine")
                         if new_utility < utility:
@@ -56,14 +56,12 @@ class Agent:
 
                 if key == "TurkishCuisine":
                     if cuisine == self.ontology.TurkishCuisine:
-                        new_utility *= value                        
+                        new_utility = value * utility                       
                         if new_utility > utility:
                             good_reasons.append(" - This restaurant has an Turkish Cuisine")
                         if new_utility < utility:
                             good_reasons.append(" - This restaurant has an Turkish Cuisine")
                         utility = new_utility
-
-            #Check nutrients
 
             #Check pricerange
             pricerange = res.hasPriceClass 
@@ -75,42 +73,74 @@ class Agent:
                 bad_reasons.append(" - This restaurant is in the {} pricerange".format(pricerange))
 
 
-            #Check co2 and allergies of meals
-            if climate:
-                meals_co2 = []
-                meals_allergy = []
-                for meal in cuisine.servesMeal:
-                    co2 = 0
-                    meal_contain = False
-                    for ing in meal.hasIngredient:
-                        if ing.carbonFootprint: #change this in ontology so every ingredient has an carbonFootprint
-                            co2 += ing.carbonFootprint
-                        if ing.containsAllergy:
-                            for allergy in ing.containsAllergy:
-                                if allergy in self.constraints:
-                                    meal_contain = True
-                           
-                    meals_co2.append(co2)
-                    meals_allergy.append(meal_contain)
+            #Check meals on carbon footprint, allergies and nutrients
+            meals_co2 = []
+            meals_allergy = []
+            meals_protein = []
+            meals_vitamins = []
+            for meal in cuisine.servesMeal:
+                carbon_footprint = 0
+                meal_contain = False
+                proteins = 0
+                vitamins = set()
+                for ing in meal.hasIngredient:
+                    if ing.carbonFootprint:
+                        carbon_footprint += ing.carbonFootprint
+                    if ing.containsAllergy:
+                        for allergy in ing.containsAllergy:
+                            if allergy in self.constraints:
+                                meal_contain = True
+                    if ing.gramsOfProteinPerMeal:
+                        proteins += ing.gramsOfProteinPerMeal
+                    if ing.containsVitamin:
+                        for vitamin in ing.containsVitamin:
+                            vitamins.add(vitamin)
+                       
+                meals_co2.append(carbon_footprint)
+                meals_allergy.append(meal_contain)
+                meals_protein.append(proteins)
+                meals_vitamins.append(vitamins)
 
+            if climate: 
                 if climate > min(meals_co2):
                    utility *= 1.5
                    good_reasons.append(" - This restaurant serves at least one meal with an acceptable carbon footprint")
                 else:
                    utility *= 0.5
                    bad_reasons.append(" - This restaurant serves no meals with acceptable caron footprints")
-                
-                if meals_allergy:
-                    if all(meals_allergy):
-                        print(res)
-                        utility = 0
-                    else:
-                        good_reasons.append(" - This restaurant can handle your allergy")
-                
             
+            if meals_allergy:
+                if all(meals_allergy):
+                    utility = 0
+                else:
+                    good_reasons.append(" - This restaurant can handle your allergy")
+            
+            if self.ontology.proteinDeficiency in self.constraints:
+                if 30 <= max(meals_protein):
+                    utility *= 1.5
+                    good_reasons.append(" - This restaurant serves at least one high protein meal")
+                else:
+                    utility *= 0.5
+                    bad_reasons.append(" - This restaurant serves no high protein meal")
+            
+            vitamin_deficiencies = self.ontology.search(type = self.ontology.VitaminDeficiency)
+            needed_vitamins = [vitamin_deficiency.needsVitamin for vitamin_deficiency in vitamin_deficiencies if vitamin_deficiency in self.constraints]
+            if needed_vitamins:
+                right_vitamins = False
+                for meal_vitamins in meals_vitamins:
+                    if set(needed_vitamins).issubset(meal_vitamins):
+                        right_vitamins = True
+                        break
+                if right_vitamins:    
+                    utility *= 1.5
+                    good_reasons.append(" - This restaurant serves at least one meal with the right vitamins")
+                else: 
+                    utility *= 0.5
+                    bad_reasons.append(" - This restaurant serves no meal with the right vitamins")
+
 
             #Check transportation  
-            score_transports = self.check_transportation(sc["transport"], climate, res)            
+            score_transports = self.check_transportation(sc["transport"], climate, res.locatedIn)            
             if score_transports["score"]:
                 max_uti = max(score_transports["score"].values())
                 max_transports = [trans for (trans, score) in score_transports["score"].items() if score == max_uti]
@@ -194,7 +224,7 @@ class Agent:
         score_transports = {}          
         score_transports["score"] = {}
         score_transports["reason"] = {}
-
+        
         if self.neigh in location:
             #same neighbourhood
             for transport in self.poss_transports:
