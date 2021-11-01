@@ -271,6 +271,9 @@
         <NamedIndividual IRI="#Batman"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#BatmanSA18"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#BatmanTH18"/>
     </Declaration>
     <Declaration>
@@ -307,10 +310,43 @@
         <NamedIndividual IRI="#CitizenKane"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#CitizenKaneFR16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CitizenKaneMO16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CitizenKaneSA16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CitizenKaneSN16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CitizenKaneTH16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CitizenKaneTU16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CitizenKaneWE16"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#CityCentre"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CocaineCowboys"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CocaineCowboysFR18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CocaineCowboysMO18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CocaineCowboysSN18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CocaineCowboysWE18"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Eggplant"/>
@@ -323,6 +359,15 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#FearStreet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FearStreetSA21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FearStreetTH21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FearStreetTU21"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Fever"/>
@@ -361,6 +406,15 @@
         <NamedIndividual IRI="#KissingJessicaStein"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#KissingJessicaSteinSA21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#KissingJessicaSteinTH21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#KissingJessicaSteinTU21"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Kofte"/>
     </Declaration>
     <Declaration>
@@ -374,6 +428,18 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LaughsAndGaffs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LaughsAndGaffsFR16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LaughsAndGaffsMO16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LaughsAndGaffsSN16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LaughsAndGaffsWE16"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LeJardin"/>
@@ -400,6 +466,27 @@
         <NamedIndividual IRI="#MyBigFatGreekWeeding"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingFR18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingMO18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingSA18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingSN18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingTH18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingTU18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingWE18"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#NoBikeLanes"/>
     </Declaration>
     <Declaration>
@@ -410,6 +497,18 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Parasite"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ParasiteFR21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ParasiteMO21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ParasiteSN21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ParasiteWE21"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Pizza"/>
@@ -448,6 +547,15 @@
         <NamedIndividual IRI="#Schumacher"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#SchumacherSA16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SchumacherTH16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SchumacherTU16"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Schwarma"/>
     </Declaration>
     <Declaration>
@@ -463,19 +571,73 @@
         <NamedIndividual IRI="#Spiderman"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#SpidermanFR18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SpidermanMO18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SpidermanSN18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SpidermanWE18"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#TasteOfRome"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#The400Blows"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#The400BlowsSA16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#The400BlowsTH16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#The400BlowsTU16"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#TheBoyBehindTheDoor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorFR21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorMO21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorSA21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorSN21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorTH21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorTU21"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorWE21"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#TheFrenchTable"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#TheIntouchables"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheIntouchablesFR18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheIntouchablesMO18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheIntouchablesSN18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TheIntouchablesWE18"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#TheIstanbul"/>
@@ -674,6 +836,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#BatmanSA18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
         <NamedIndividual IRI="#BatmanTH18"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -717,8 +883,52 @@
         <NamedIndividual IRI="#CitizenKane"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#CitizenKaneFR16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#CitizenKaneMO16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#CitizenKaneSA16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#CitizenKaneSN16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#CitizenKaneTH16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#CitizenKaneTU16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#CitizenKaneWE16"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Movie"/>
         <NamedIndividual IRI="#CocaineCowboys"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#CocaineCowboysFR18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#CocaineCowboysMO18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#CocaineCowboysSN18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#CocaineCowboysWE18"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Transportation"/>
@@ -727,6 +937,18 @@
     <ClassAssertion>
         <Class IRI="#Movie"/>
         <NamedIndividual IRI="#FearStreet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#FearStreetSA21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#FearStreetTH21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#FearStreetTU21"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CovidSymptom"/>
@@ -773,6 +995,18 @@
         <NamedIndividual IRI="#KissingJessicaStein"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#KissingJessicaSteinSA21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#KissingJessicaSteinTH21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#KissingJessicaSteinTU21"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Meal"/>
         <NamedIndividual IRI="#Kofte"/>
     </ClassAssertion>
@@ -791,6 +1025,22 @@
     <ClassAssertion>
         <Class IRI="#Movie"/>
         <NamedIndividual IRI="#LaughsAndGaffs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#LaughsAndGaffsFR16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#LaughsAndGaffsMO16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#LaughsAndGaffsSN16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#LaughsAndGaffsWE16"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Restaurant"/>
@@ -821,6 +1071,34 @@
         <NamedIndividual IRI="#MyBigFatGreekWeeding"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingFR18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingMO18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingSA18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingSN18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingTH18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingTU18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingWE18"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#NeighbourhoodConstraint"/>
         <NamedIndividual IRI="#NoBikeLanes"/>
     </ClassAssertion>
@@ -835,6 +1113,22 @@
     <ClassAssertion>
         <Class IRI="#Movie"/>
         <NamedIndividual IRI="#Parasite"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#ParasiteFR21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#ParasiteMO21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#ParasiteSN21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#ParasiteWE21"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Meal"/>
@@ -885,6 +1179,18 @@
         <NamedIndividual IRI="#Schumacher"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#SchumacherSA16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#SchumacherTH16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#SchumacherTU16"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Meal"/>
         <NamedIndividual IRI="#Schwarma"/>
     </ClassAssertion>
@@ -905,6 +1211,22 @@
         <NamedIndividual IRI="#Spiderman"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#SpidermanFR18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#SpidermanMO18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#SpidermanSN18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#SpidermanWE18"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Restaurant"/>
         <NamedIndividual IRI="#TasteOfRome"/>
     </ClassAssertion>
@@ -913,8 +1235,48 @@
         <NamedIndividual IRI="#The400Blows"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#The400BlowsSA16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#The400BlowsTH16"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#The400BlowsTU16"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Movie"/>
         <NamedIndividual IRI="#TheBoyBehindTheDoor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorFR21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorMO21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorSA21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorSN21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorTH21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorTU21"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorWE21"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Restaurant"/>
@@ -923,6 +1285,22 @@
     <ClassAssertion>
         <Class IRI="#Movie"/>
         <NamedIndividual IRI="#TheIntouchables"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#TheIntouchablesFR18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#TheIntouchablesMO18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#TheIntouchablesSN18"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MovieProgram"/>
+        <NamedIndividual IRI="#TheIntouchablesWE18"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Restaurant"/>
@@ -1453,6 +1831,16 @@
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#BatmanSA18"/>
+        <Literal>saturday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#BatmanSA18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
         <NamedIndividual IRI="#BatmanTH18"/>
         <Literal>thursday</Literal>
     </DataPropertyAssertion>
@@ -1542,6 +1930,76 @@
         <Literal>Citizen Kane</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#CitizenKaneFR16"/>
+        <Literal>friday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#CitizenKaneFR16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#CitizenKaneMO16"/>
+        <Literal>monday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#CitizenKaneMO16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#CitizenKaneSA16"/>
+        <Literal>saturday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#CitizenKaneSA16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#CitizenKaneSN16"/>
+        <Literal>sunday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#CitizenKaneSN16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#CitizenKaneTH16"/>
+        <Literal>thursday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#CitizenKaneTH16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#CitizenKaneTU16"/>
+        <Literal>tuesday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#CitizenKaneTU16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#CitizenKaneWE16"/>
+        <Literal>wednesday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#CitizenKaneWE16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#duration"/>
         <NamedIndividual IRI="#CocaineCowboys"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">70</Literal>
@@ -1555,6 +2013,46 @@
         <DataProperty IRI="#nameMovie"/>
         <NamedIndividual IRI="#CocaineCowboys"/>
         <Literal>Cocaine Cowboys</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#CocaineCowboysFR18"/>
+        <Literal>friday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#CocaineCowboysFR18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#CocaineCowboysMO18"/>
+        <Literal>monday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#CocaineCowboysMO18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#CocaineCowboysSN18"/>
+        <Literal>sunday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#CocaineCowboysSN18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#CocaineCowboysWE18"/>
+        <Literal>wednesday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#CocaineCowboysWE18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#carbonFootprint"/>
@@ -1600,6 +2098,36 @@
         <DataProperty IRI="#nameMovie"/>
         <NamedIndividual IRI="#FearStreet"/>
         <Literal>Fear Street</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#FearStreetSA21"/>
+        <Literal>saturday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#FearStreetSA21"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#FearStreetTH21"/>
+        <Literal>thursday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#FearStreetTH21"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#FearStreetTU21"/>
+        <Literal>tuesday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#FearStreetTU21"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#carbonFootprint"/>
@@ -1667,6 +2195,36 @@
         <Literal>Kissing Jessica Stein</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#KissingJessicaSteinSA21"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#KissingJessicaSteinSA21"/>
+        <Literal>saturday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#KissingJessicaSteinTH21"/>
+        <Literal>thursday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#KissingJessicaSteinTH21"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#KissingJessicaSteinTU21"/>
+        <Literal>tuesday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#KissingJessicaSteinTU21"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#carbonFootprint"/>
         <NamedIndividual IRI="#Lamb"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">39</Literal>
@@ -1700,6 +2258,46 @@
         <DataProperty IRI="#nameMovie"/>
         <NamedIndividual IRI="#LaughsAndGaffs"/>
         <Literal>Laughs And Gaffs</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#LaughsAndGaffsFR16"/>
+        <Literal>friday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#LaughsAndGaffsFR16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#LaughsAndGaffsMO16"/>
+        <Literal>monday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#LaughsAndGaffsMO16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#LaughsAndGaffsSN16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#LaughsAndGaffsSN16"/>
+        <Literal>sunday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#LaughsAndGaffsWE16"/>
+        <Literal>wednesday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#LaughsAndGaffsWE16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasPriceClass"/>
@@ -1742,6 +2340,76 @@
         <Literal>My Big Fat Greek Weeding</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingFR18"/>
+        <Literal>friday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingFR18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingMO18"/>
+        <Literal>monday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingMO18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingSA18"/>
+        <Literal>saturday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingSA18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingSN18"/>
+        <Literal>sunday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingSN18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingTH18"/>
+        <Literal>thursday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingTH18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingTU18"/>
+        <Literal>tuesday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingTU18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingWE18"/>
+        <Literal>wednesday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingWE18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#duration"/>
         <NamedIndividual IRI="#Parasite"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">120</Literal>
@@ -1755,6 +2423,46 @@
         <DataProperty IRI="#nameMovie"/>
         <NamedIndividual IRI="#Parasite"/>
         <Literal>Parasite</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#ParasiteFR21"/>
+        <Literal>friday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#ParasiteFR21"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#ParasiteMO21"/>
+        <Literal>monday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#ParasiteMO21"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#ParasiteSN21"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#ParasiteSN21"/>
+        <Literal>sunday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#ParasiteWE21"/>
+        <Literal>wednesday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#ParasiteWE21"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#carbonFootprint"/>
@@ -1847,6 +2555,36 @@
         <Literal>Schumacher</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#SchumacherSA16"/>
+        <Literal>saturday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#SchumacherSA16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#SchumacherTH16"/>
+        <Literal>thursday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#SchumacherTH16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#SchumacherTU16"/>
+        <Literal>tuesday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#SchumacherTU16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#carbonFootprint"/>
         <NamedIndividual IRI="#Spaghetti"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
@@ -1870,6 +2608,46 @@
         <DataProperty IRI="#nameMovie"/>
         <NamedIndividual IRI="#Spiderman"/>
         <Literal>Spiderman</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#SpidermanFR18"/>
+        <Literal>friday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#SpidermanFR18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#SpidermanMO18"/>
+        <Literal>monday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#SpidermanMO18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#SpidermanSN18"/>
+        <Literal>sunday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#SpidermanSN18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#SpidermanWE18"/>
+        <Literal>wednesday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#SpidermanWE18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasPriceClass"/>
@@ -1897,6 +2675,36 @@
         <Literal>The 400 Blows</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#The400BlowsSA16"/>
+        <Literal>saturday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#The400BlowsSA16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#The400BlowsTH16"/>
+        <Literal>thursday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#The400BlowsTH16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#The400BlowsTU16"/>
+        <Literal>tuesday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#The400BlowsTU16"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#duration"/>
         <NamedIndividual IRI="#TheBoyBehindTheDoor"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">80</Literal>
@@ -1910,6 +2718,76 @@
         <DataProperty IRI="#nameMovie"/>
         <NamedIndividual IRI="#TheBoyBehindTheDoor"/>
         <Literal>The Boy Behind The Door</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorFR21"/>
+        <Literal>friday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorFR21"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorMO21"/>
+        <Literal>monday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorMO21"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorSA21"/>
+        <Literal>saturday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorSA21"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorSN21"/>
+        <Literal>sunday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorSN21"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorTH21"/>
+        <Literal>thursday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorTH21"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorTU21"/>
+        <Literal>tuesday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorTU21"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorWE21"/>
+        <Literal>wednesday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorWE21"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2100</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasPriceClass"/>
@@ -1935,6 +2813,46 @@
         <DataProperty IRI="#nameMovie"/>
         <NamedIndividual IRI="#TheIntouchables"/>
         <Literal>The Intouchables</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#TheIntouchablesFR18"/>
+        <Literal>friday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#TheIntouchablesFR18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#TheIntouchablesMO18"/>
+        <Literal>monday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#TheIntouchablesMO18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#TheIntouchablesSN18"/>
+        <Literal>sunday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#TheIntouchablesSN18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#dayScheduleMovie"/>
+        <NamedIndividual IRI="#TheIntouchablesWE18"/>
+        <Literal>wednesday</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#scheduleMovieTime"/>
+        <NamedIndividual IRI="#TheIntouchablesWE18"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hasPriceClass"/>
