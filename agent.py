@@ -167,10 +167,10 @@ class Agent:
         return options
 
     def get_movies(self, sc):
-        options = {"scores" : {}, "good_reasons": {}, "bad_reasons": {}}    #options for movies
-        options2 = {"scores" : {}, "good_reasons": {}, "bad_reasons": {}}   #options for moviePrograms, which we will return
+        movie_options = {"scores" : {}, "good_reasons": {}, "bad_reasons": {}}    #options for movies
+        movie_program_options = {"scores" : {}, "good_reasons": {}, "bad_reasons": {}}   #options for moviePrograms
 
-        #Get movies that are at the right time
+        #Get movies and programs
         movies = self.ontology.search(type = self.ontology.Movie)
         moviePrograms = self.ontology.search(type = self.ontology.MovieProgram)
 
@@ -180,10 +180,10 @@ class Agent:
             good_reasonsS = []
             bad_reasonsS = []
 
-            date, dateV=sc["movie_pref"]["date"][0]
-            startBefore, startBeforeV=sc["movie_pref"]["startMovieBefore"][0]
-            startAfter, startAfterV=sc["movie_pref"]["startMovieAfter"][0]
-            finishBefore, finishBeforeV=sc["movie_pref"]["finishMovieBefore"][0]
+            date, dateV = sc["movie_pref"]["date"]
+            startBefore, startBeforeV=sc["movie_pref"]["startMovieBefore"]
+            startAfter, startAfterV=sc["movie_pref"]["startMovieAfter"]
+            finishBefore, finishBeforeV=sc["movie_pref"]["finishMovieBefore"]
 
             #check the day if correct
             if movProg.dayScheduleMovie[0] == date:  #if the day is same
@@ -194,7 +194,7 @@ class Agent:
                     bad_reasonsS.append(" - This movie will be on {}".format(date))
                 utilitys = new_utilitys
             #check if movie starts before
-            if movProg.scheduleMovieTime[0] < startBefore:
+            if movProg.scheduleMovieTime < startBefore:
                 new_utilitys = utilitys * startBeforeV
                 good_reasonsS.append(" - This movie will start before {}".format(startBefore))
                 utilitys = new_utilitys
@@ -203,7 +203,7 @@ class Agent:
                 bad_reasonsS.append(" - This movie will start before {}".format(startBefore))
                 utilitys = new_utilitys
             #check if movie starts after
-            if movProg.scheduleMovieTime[0] > startAfter:
+            if movProg.scheduleMovieTime > startAfter:
                 new_utilitys = utilitys * startAfterV
                 good_reasonsS.append(" - This movie will start after {}".format(startAfter))
                 utilitys = new_utilitys
@@ -214,7 +214,7 @@ class Agent:
             #evaluate duration of movie with time
             for m in movies:    #have to take movie property duration, to compare with moviePrograms
                 if movProg.presentingMovie == m:   #IMPORTANT: CHECK CONNECTION! BETWEEN MOVIE AND MOVIEPROGRAM    movProg.name == m
-                    if movProg.scheduleMovieTime[0]+m.duration[0] < finishBefore:
+                    if movProg.scheduleMovieTime+m.duration < finishBefore:
                         new_utilitys = utilitys * finishBeforeV
                         good_reasonsS.append(" - This movie will end before {}".format(finishBefore))
                         utilitys = new_utilitys
@@ -226,10 +226,9 @@ class Agent:
 
             #Adding movieProgram to the possibilities
             if utilitys != 0:
-                movProg_name = String(movProg)  #name of the program/ check if correct
-                options2["scores"][movProg_name] = utilitys
-                options2["good_reasons"][movProg_name] = good_reasonsS
-                options2["bad_reasons"][movProg_name] = bad_reasonsS
+                movie_program_options["scores"][movProg] = utilitys
+                movie_program_options["good_reasons"][movProg] = good_reasonsS
+                movie_program_options["bad_reasons"][movProg] = bad_reasonsS
 
         #end of moviePrograms :(
 
@@ -250,40 +249,46 @@ class Agent:
                     utility = new_utility
 
             #Check for duration
-            duration = movie.duration[0]
+            duration = movie.duration
             if sc["movie_pref"]["duration"] == "short":
                 if duration <= 90:
                     utility *= 1.7
-                    good_reasons.append(" - The duration of this movie is {}, which is a short movie".format(movie.duration[0]))
+                    good_reasons.append(" - The duration of this movie is {}, which is a short movie".format(duration))
                 if duration > 120:
                     utility *= 0.4
-                    bad_reasons.append(" - The duration of this movie is {}, which is a long movie".format(movie.duration[0]))
+                    bad_reasons.append(" - The duration of this movie is {}, which is a long movie".format(duration))
             if sc["movie_pref"]["duration"] == "average":
                 if duration > 90 & duration <= 120:
                     utility *= 1.7
-                    good_reasons.append(" - The duration of this movie is {}, which is a average movie".format(movie.duration[0]))
+                    good_reasons.append(" - The duration of this movie is {}, which is a average movie".format(duration))
             if sc["movie_pref"]["duration"] == "long":
                 if duration <= 90:
                     utility *= 0.4
-                    bad_reasons.append(" - The duration of this movie is {}, which is a short movie".format(movie.duration[0]))
+                    bad_reasons.append(" - The duration of this movie is {}, which is a short movie".format(duration))
                 if duration > 120:
                     utility *= 1.7
-                    good_reasons.append(" - The duration of this movie is {}, which is a long movie".format(movie.duration[0]))
+                    good_reasons.append(" - The duration of this movie is {}, which is a long movie".format(duration))
 
 
             #Adding movie to the options
             if utility != 0:
-                movie_name = movie.nameMovie[0]
-                options["scores"][movie_name] = utility
-                options["good_reasons"][movie_name] = good_reasons
-                options["bad_reasons"][movie_name] = bad_reasons
+                movie_options["scores"][movie] = utility
+                movie_options["good_reasons"][movie] = good_reasons
+                movie_options["bad_reasons"][movie] = bad_reasons
 
         #go through all moviePrograms and combine value with their movies value - update options
-        for opti in options2:
-            for opt in options:
-                if opti.presentingMovie == opt:     #IMPORTANT: CHECK CONNECTION! BETWEEN MOVIE AND MOVIEPROGRAM
-                    opti["scores"] = (opti["scores"] + opt["scores"])/2
+        options = {"scores" : {}, "good_reasons": {}, "bad_reasons": {}}
+        for movie_program in movie_program_options["scores"].keys():
+            movie = movie_program.presentingMovie
+            #option = "{} played in {} at {}, {}".format(movie.nameMovie, movie_program.presentedIn.CinemaName, movie_program.dayScheduleMovie, movie_program.timeSchedaleMovie)
+            option = "{} played in at {}, {}".format(movie.nameMovie, movie_program.dayScheduleMovie, movie_program.scheduleMovieTime)
+            options["scores"][option] = movie_options["scores"][movie] * movie_program_options["scores"][movie_program]
+            options["good_reasons"][option] = movie_options["good_reasons"][movie] + movie_program_options["good_reasons"][movie_program]
+            options["bad_reasons"][option] = movie_options["bad_reasons"][movie] + movie_program_options["bad_reasons"][movie_program]
 
+        return options
+    
+    
     def check_transportation(self, max_duration, climate, location):   
         score_transports = {}          
         score_transports["score"] = {}
