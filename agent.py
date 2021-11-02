@@ -200,6 +200,7 @@ class Agent:
                 utilitys = new_utilitys
             #check if movie starts before
             print(movProg)
+            print(movProg.scheduleMovieTime)
             if movProg.scheduleMovieTime < startBefore:
                 new_utilitys = utilitys * startBeforeV
                 good_reasonsS.append(" - This movie will start before {}".format(startBefore))
