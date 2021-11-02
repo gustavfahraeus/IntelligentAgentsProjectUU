@@ -118,6 +118,9 @@
         <ObjectProperty IRI="#doesNotUseTransportation"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#founderOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasConstraint"/>
     </Declaration>
     <Declaration>
@@ -146,6 +149,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#needsVitamin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#neighbourOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#partOf"/>
@@ -3571,6 +3577,12 @@
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#servesCuisine"/>
     </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#founderOf"/>
+    </InverseFunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#neighbourOf"/>
+    </SymmetricObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#inFood"/>
     </TransitiveObjectProperty>
@@ -3592,6 +3604,10 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#doesNotUseTransportation"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#founderOf"/>
         <Class IRI="#User"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -3634,6 +3650,10 @@
         <Class IRI="#Deficiency"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#neighbourOf"/>
+        <Class IRI="#User"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#presentingMovie"/>
         <Class IRI="#MovieProgram"/>
     </ObjectPropertyDomain>
@@ -3660,6 +3680,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#doesNotUseTransportation"/>
         <Class IRI="#Transportation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#founderOf"/>
+        <Class IRI="#Restaurant"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasConstraint"/>
@@ -3691,6 +3715,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#needsVitamin"/>
         <Class IRI="#Vitamin"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#neighbourOf"/>
+        <Class IRI="#User"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#presentingMovie"/>
