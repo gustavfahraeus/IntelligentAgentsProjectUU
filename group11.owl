@@ -295,6 +295,9 @@
         <NamedIndividual IRI="#Binnenstad"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Bob"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Cheap"/>
     </Declaration>
     <Declaration>
@@ -687,6 +690,9 @@
     <Declaration>
         <NamedIndividual IRI="#Zucchini"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#noLicense"/>
+    </Declaration>
     <SubClassOf>
         <Class IRI="#Allergy"/>
         <Class IRI="#HealthCondition"/>
@@ -750,6 +756,18 @@
         <Class IRI="#FoodItem"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#MovieProgram"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="#dayScheduleMovie"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MovieProgram"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="#scheduleMovieTime"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Neighbourhood"/>
         <Class IRI="#Location"/>
     </SubClassOf>
@@ -759,6 +777,7 @@
             <ObjectIntersectionOf>
                 <ObjectMinCardinality cardinality="1">
                     <ObjectProperty IRI="#hasTrainStation"/>
+                    <Class IRI="#TrainStation"/>
                 </ObjectMinCardinality>
                 <DataSomeValuesFrom>
                     <DataProperty IRI="#inhabitants"/>
@@ -879,6 +898,10 @@
     <ClassAssertion>
         <Class IRI="#Neighbourhood"/>
         <NamedIndividual IRI="#Binnenstad"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#User"/>
+        <NamedIndividual IRI="#Bob"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Meat"/>
@@ -1372,6 +1395,10 @@
         <Class IRI="#Vegetable"/>
         <NamedIndividual IRI="#Zucchini"/>
     </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Constraint"/>
+        <NamedIndividual IRI="#noLicense"/>
+    </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
         <NamedIndividual IRI="#AlbertHeijn"/>
@@ -1391,11 +1418,6 @@
         <ObjectProperty IRI="#hasConstraint"/>
         <NamedIndividual IRI="#Alice"/>
         <NamedIndividual IRI="#GlutenAllergy"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasConstraint"/>
-        <NamedIndividual IRI="#Alice"/>
-        <NamedIndividual IRI="#VitaminBDeficiency"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#residesIn"/>
@@ -1461,6 +1483,21 @@
         <ObjectProperty IRI="#locatedIn"/>
         <NamedIndividual IRI="#Binnenstad"/>
         <NamedIndividual IRI="#Amsterdam"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasConstraint"/>
+        <NamedIndividual IRI="#Bob"/>
+        <NamedIndividual IRI="#VitaminBDeficiency"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasConstraint"/>
+        <NamedIndividual IRI="#Bob"/>
+        <NamedIndividual IRI="#noLicense"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#residesIn"/>
+        <NamedIndividual IRI="#Bob"/>
+        <NamedIndividual IRI="#SciencePark"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#containsVitamin"/>
@@ -1826,11 +1863,6 @@
         <ObjectProperty IRI="#locatedIn"/>
         <NamedIndividual IRI="#Lidl"/>
         <NamedIndividual IRI="#Tolsteeg"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#scheduleMovie"/>
-        <NamedIndividual IRI="#MyBigFatGreekWeeding"/>
-        <NamedIndividual IRI="#Rembrandt"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
@@ -2401,6 +2433,11 @@
         <DataProperty IRI="#userName"/>
         <NamedIndividual IRI="#Alice"/>
         <Literal>Alice</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inhabitants"/>
+        <NamedIndividual IRI="#Amsterdam"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">23619</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#duration"/>
@@ -3553,6 +3590,9 @@
         <ObjectProperty IRI="#residesIn"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
+        <ObjectProperty IRI="#scheduleMovie"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
         <ObjectProperty IRI="#servesCuisine"/>
     </FunctionalObjectProperty>
     <TransitiveObjectProperty>
@@ -3566,9 +3606,6 @@
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#partOf"/>
-    </TransitiveObjectProperty>
-    <TransitiveObjectProperty>
-        <ObjectProperty IRI="#scheduleMovie"/>
     </TransitiveObjectProperty>
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#sells"/>
@@ -3630,7 +3667,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#scheduleMovie"/>
-        <Class IRI="#Cinema"/>
+        <Class IRI="#MovieProgram"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#sells"/>
@@ -3689,7 +3726,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#scheduleMovie"/>
-        <Class IRI="#MovieProgram"/>
+        <Class IRI="#Cinema"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#sells"/>

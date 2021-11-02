@@ -10,22 +10,27 @@ class Agent:
         self.ontology = get_ontology('./group11.owl').load()
 
         with self.ontology:
-            sync_reasoner(infer_property_values=True)
-
+            sync_reasoner(infer_property_values=True)        
+        
     def get_user(self, name):
         self.user = self.ontology.search(type = self.ontology.User, userName = name)[0]
         self.constraints = self.user.hasConstraint
+        self.neigh = self.user.residesIn
+        self.city = self.neigh.locatedIn
+        self.poss_transports = self.ontology.search(type = self.ontology.Transportation)
+        if (self.ontology.BikingImpairment in self.constraints):
+            self.poss_transports.remove(self.ontology.Biking)
+        if self.neigh not in self.ontology.search(hasTrainStation = "*"):
+            self.poss_transports.remove(self.ontology.Train)
+        if (self.ontology.noLicense in self.constraints):
+            self.poss_transports.remove(self.ontology.ElectricCar)
+            self.poss_transports.remove(self.ontology.GasolineCar)
 
     def get_restaurants(self, sc):
         options = {"scores" : {}, "good_reasons": {}, "bad_reasons": {}}
 
         climate = sc["climate"]
-        neigh = self.user.residesIn
-        city = neigh.locatedIn
         max_duration = sc["transport"]
-        poss_transports = self.ontology.search(type = self.ontology.Transportation)
-        if (self.ontology.BikingImpairment in self.constraints):
-            poss_transports.remove(self.ontology.Biking)
 
         restaurants = self.ontology.search(type = self.ontology.Restaurant)
         for res in restaurants:
@@ -186,7 +191,7 @@ class Agent:
             finishBefore, finishBeforeV=sc["movie_pref"]["finishMovieBefore"]
 
             #check the day if correct
-            if movProg.dayScheduleMovie[0] == date:  #if the day is same
+            if movProg.dayScheduleMovie == date:  #if the day is same
                 new_utilitys = utilitys * dateV
                 if new_utilitys > utilitys:
                     good_reasonsS.append(" - This movie will be today")
@@ -194,6 +199,7 @@ class Agent:
                     bad_reasonsS.append(" - This movie will be on {}".format(date))
                 utilitys = new_utilitys
             #check if movie starts before
+            print(movProg)
             if movProg.scheduleMovieTime < startBefore:
                 new_utilitys = utilitys * startBeforeV
                 good_reasonsS.append(" - This movie will start before {}".format(startBefore))
@@ -223,6 +229,21 @@ class Agent:
                         bad_reasonsS.append(" - This movie will not end before {}".format(finishBefore))
                         utilitys = new_utilitys
 
+            #Check transportation  
+            score_transports = self.check_transportation(sc["transport"], sc["climate"], movProg.scheduleMovie.locatedIn)            
+            if score_transports["score"]:
+                max_uti = max(score_transports["score"].values())
+                max_transports = [trans for (trans, score) in score_transports["score"].items() if score == max_uti]
+                new_utility = utilitys*max_uti
+                if new_utility > utilitys:
+                    for trans in max_transports:
+                        good_reasonsS.append(score_transports["reason"][trans])
+                else:
+                    for trans in max_transports:
+                        bad_reasonsS.append(score_transports["reason"][trans])
+                utilitys = new_utility
+            else:
+                utility = 0
 
             #Adding movieProgram to the possibilities
             if utilitys != 0:
@@ -230,6 +251,7 @@ class Agent:
                 movie_program_options["good_reasons"][movProg] = good_reasonsS
                 movie_program_options["bad_reasons"][movProg] = bad_reasonsS
 
+        
         #end of moviePrograms :(
 
         #.....movies........
@@ -280,7 +302,7 @@ class Agent:
         options = {"scores" : {}, "good_reasons": {}, "bad_reasons": {}}
         for movie_program in movie_program_options["scores"].keys():
             movie = movie_program.presentingMovie
-            #option = "{} played in {} at {}, {}".format(movie.nameMovie, movie_program.presentedIn.CinemaName, movie_program.dayScheduleMovie, movie_program.timeSchedaleMovie)
+            #option = "{} played in {} at {}, {}".format(movie.nameMovie, movie_program.scheduleMovie.CinemaName, movie_program.dayScheduleMovie, movie_program.timeSchedaleMovie)
             option = "{} played in at {}, {}".format(movie.nameMovie, movie_program.dayScheduleMovie, movie_program.scheduleMovieTime)
             options["scores"][option] = movie_options["scores"][movie] * movie_program_options["scores"][movie_program]
             options["good_reasons"][option] = movie_options["good_reasons"][movie] + movie_program_options["good_reasons"][movie_program]
@@ -314,25 +336,25 @@ class Agent:
                 if transport.sameCityDuration:
                     if (max_duration < transport.sameCityDuration) & (climate > transport.carbonFootprint):
                         score_transports["score"][transport] = 1.5
-                        score_transports["reason"][transport] = " - You can {} to this restaurant".format(transport.action)
+                        score_transports["reason"][transport] = " - You can {} to this".format(transport.action)
                     elif climate > transport.carbonFootprint:
                         score_transports["score"][transport] = 0.8
-                        score_transports["reason"][transport] = " - You can {} to this restaurant, but it takes {} minutes".format(transport.action, transport.sameCityDuration)
+                        score_transports["reason"][transport] = " - You can {} to this, but it takes {} minutes".format(transport.action, transport.sameCityDuration)
                     elif  max_duration < transport.sameCityDuration:
                         score_transports["score"][transport] = 0.8
-                        score_transports["reason"][transport] = " - You can {} to this restaurant, but it has a carbon footprint of {}".format(transport.action, transport.carbonFootprint)
+                        score_transports["reason"][transport] = " - You can {} to this, but it has a carbon footprint of {}".format(transport.action, transport.carbonFootprint)
         else:
             #other city
             for transport in self.poss_transports:
                 if transport.otherCityDuration:
                     if (max_duration < transport.otherCityDuration) & (climate > transport.carbonFootprint):
                         score_transports["score"][transport] = 1.5
-                        score_transports["reason"][transport] = " - You can {} to this restaurant".format(transport.action)
+                        score_transports["reason"][transport] = " - You can {} to this".format(transport.action)
                     elif climate > transport.carbonFootprint:
                         score_transports["score"][transport] = 0.8
-                        score_transports["reason"][transport] = " - You can {} to this restaurant, but it takes {} minutes".format(transport.action, transport.otherCityDuration)
+                        score_transports["reason"][transport] = " - You can {} to this, but it takes {} minutes".format(transport.action, transport.otherCityDuration)
                     elif  max_duration < transport.otherCityDuration:
                         score_transports["score"][transport] = 0.8
-                        score_transports["reason"][transport] = " - You can {} to this restaurant, but it has a carbon footprint of {}".format(transport.action, transport.carbonFootprint)         
+                        score_transports["reason"][transport] = " - You can {} to this, but it has a carbon footprint of {}".format(transport.action, transport.carbonFootprint)         
         
         return score_transports
