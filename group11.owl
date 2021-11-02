@@ -1408,14 +1408,29 @@
         <NamedIndividual IRI="#Batman"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#BatmanSA18"/>
+        <NamedIndividual IRI="#Kinepolis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#BatmanTH18"/>
         <NamedIndividual IRI="#Batman"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#BatmanTH18"/>
+        <NamedIndividual IRI="#Kinepolis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#BatmanTU18"/>
         <NamedIndividual IRI="#Batman"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#BatmanTU18"/>
+        <NamedIndividual IRI="#Kinepolis"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#containsVitamin"/>
@@ -1473,9 +1488,19 @@
         <NamedIndividual IRI="#CitizenKane"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#CitizenKaneFR16"/>
+        <NamedIndividual IRI="#Kinepolis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#CitizenKaneMO16"/>
         <NamedIndividual IRI="#CitizenKane"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#CitizenKaneMO16"/>
+        <NamedIndividual IRI="#Kinepolis"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
@@ -1483,9 +1508,19 @@
         <NamedIndividual IRI="#CitizenKane"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#CitizenKaneSA16"/>
+        <NamedIndividual IRI="#Kinepolis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#CitizenKaneSN16"/>
         <NamedIndividual IRI="#CitizenKane"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#CitizenKaneSN16"/>
+        <NamedIndividual IRI="#Kinepolis"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
@@ -1493,14 +1528,29 @@
         <NamedIndividual IRI="#CitizenKane"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#CitizenKaneTH16"/>
+        <NamedIndividual IRI="#Kinepolis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#CitizenKaneTU16"/>
         <NamedIndividual IRI="#CitizenKane"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#CitizenKaneTU16"/>
+        <NamedIndividual IRI="#Kinepolis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#CitizenKaneWE16"/>
         <NamedIndividual IRI="#CitizenKane"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#CitizenKaneWE16"/>
+        <NamedIndividual IRI="#Kinepolis"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#hasTrainStation"/>
@@ -1518,9 +1568,19 @@
         <NamedIndividual IRI="#CocaineCowboys"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#CocaineCowboysFR18"/>
+        <NamedIndividual IRI="#Kinepolis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#CocaineCowboysMO18"/>
         <NamedIndividual IRI="#CocaineCowboys"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#CocaineCowboysMO18"/>
+        <NamedIndividual IRI="#Kinepolis"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
@@ -1528,9 +1588,19 @@
         <NamedIndividual IRI="#CocaineCowboys"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#CocaineCowboysSN18"/>
+        <NamedIndividual IRI="#Kinepolis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#CocaineCowboysWE18"/>
         <NamedIndividual IRI="#CocaineCowboys"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#CocaineCowboysWE18"/>
+        <NamedIndividual IRI="#Kinepolis"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#ingredientOf"/>
@@ -1543,14 +1613,29 @@
         <NamedIndividual IRI="#FearStreet"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#FearStreetSA21"/>
+        <NamedIndividual IRI="#Kinepolis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#FearStreetTH21"/>
         <NamedIndividual IRI="#FearStreet"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#FearStreetTH21"/>
+        <NamedIndividual IRI="#Kinepolis"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#FearStreetTU21"/>
         <NamedIndividual IRI="#FearStreet"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#FearStreetTU21"/>
+        <NamedIndividual IRI="#Kinepolis"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inRestaurant"/>
@@ -1613,14 +1698,29 @@
         <NamedIndividual IRI="#KissingJessicaStein"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#KissingJessicaSteinSA21"/>
+        <NamedIndividual IRI="#Rembrandt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#KissingJessicaSteinTH21"/>
         <NamedIndividual IRI="#KissingJessicaStein"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#KissingJessicaSteinTH21"/>
+        <NamedIndividual IRI="#Rembrandt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#KissingJessicaSteinTU21"/>
         <NamedIndividual IRI="#KissingJessicaStein"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#KissingJessicaSteinTU21"/>
+        <NamedIndividual IRI="#Rembrandt"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inCuisine"/>
@@ -1663,9 +1763,19 @@
         <NamedIndividual IRI="#LaughsAndGaffs"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#LaughsAndGaffsFR16"/>
+        <NamedIndividual IRI="#Rembrandt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#LaughsAndGaffsMO16"/>
         <NamedIndividual IRI="#LaughsAndGaffs"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#LaughsAndGaffsMO16"/>
+        <NamedIndividual IRI="#Rembrandt"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
@@ -1673,9 +1783,19 @@
         <NamedIndividual IRI="#LaughsAndGaffs"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#LaughsAndGaffsSN16"/>
+        <NamedIndividual IRI="#Rembrandt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#LaughsAndGaffsWE16"/>
         <NamedIndividual IRI="#LaughsAndGaffs"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#LaughsAndGaffsWE16"/>
+        <NamedIndividual IRI="#Rembrandt"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
@@ -1708,9 +1828,19 @@
         <NamedIndividual IRI="#Tolsteeg"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeeding"/>
+        <NamedIndividual IRI="#Rembrandt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#MyBigFatGreekWeedingFR18"/>
         <NamedIndividual IRI="#MyBigFatGreekWeeding"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingFR18"/>
+        <NamedIndividual IRI="#Rembrandt"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
@@ -1718,9 +1848,19 @@
         <NamedIndividual IRI="#MyBigFatGreekWeeding"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingMO18"/>
+        <NamedIndividual IRI="#Rembrandt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#MyBigFatGreekWeedingSA18"/>
         <NamedIndividual IRI="#MyBigFatGreekWeeding"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingSA18"/>
+        <NamedIndividual IRI="#Rembrandt"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
@@ -1728,9 +1868,19 @@
         <NamedIndividual IRI="#MyBigFatGreekWeeding"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingSN18"/>
+        <NamedIndividual IRI="#Rembrandt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#MyBigFatGreekWeedingTH18"/>
         <NamedIndividual IRI="#MyBigFatGreekWeeding"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingTH18"/>
+        <NamedIndividual IRI="#Rembrandt"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
@@ -1738,9 +1888,19 @@
         <NamedIndividual IRI="#MyBigFatGreekWeeding"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingTU18"/>
+        <NamedIndividual IRI="#Rembrandt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#MyBigFatGreekWeedingWE18"/>
         <NamedIndividual IRI="#MyBigFatGreekWeeding"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#MyBigFatGreekWeedingWE18"/>
+        <NamedIndividual IRI="#Rembrandt"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
@@ -1758,9 +1918,19 @@
         <NamedIndividual IRI="#Parasite"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#ParasiteFR21"/>
+        <NamedIndividual IRI="#Rembrandt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#ParasiteMO21"/>
         <NamedIndividual IRI="#Parasite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#ParasiteMO21"/>
+        <NamedIndividual IRI="#Rembrandt"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
@@ -1768,9 +1938,19 @@
         <NamedIndividual IRI="#Parasite"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#ParasiteSN21"/>
+        <NamedIndividual IRI="#Rembrandt"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#ParasiteWE21"/>
         <NamedIndividual IRI="#Parasite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#ParasiteWE21"/>
+        <NamedIndividual IRI="#Rembrandt"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inCuisine"/>
@@ -1848,14 +2028,29 @@
         <NamedIndividual IRI="#Schumacher"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#SchumacherSA16"/>
+        <NamedIndividual IRI="#Tuschinski"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#SchumacherTH16"/>
         <NamedIndividual IRI="#Schumacher"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#SchumacherTH16"/>
+        <NamedIndividual IRI="#Tuschinski"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#SchumacherTU16"/>
         <NamedIndividual IRI="#Schumacher"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#SchumacherTU16"/>
+        <NamedIndividual IRI="#Tuschinski"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inCuisine"/>
@@ -1883,9 +2078,19 @@
         <NamedIndividual IRI="#Spiderman"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#SpidermanFR18"/>
+        <NamedIndividual IRI="#Tuschinski"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#SpidermanMO18"/>
         <NamedIndividual IRI="#Spiderman"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#SpidermanMO18"/>
+        <NamedIndividual IRI="#Tuschinski"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
@@ -1893,9 +2098,19 @@
         <NamedIndividual IRI="#Spiderman"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#SpidermanSN18"/>
+        <NamedIndividual IRI="#Tuschinski"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#SpidermanWE18"/>
         <NamedIndividual IRI="#Spiderman"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#SpidermanWE18"/>
+        <NamedIndividual IRI="#Tuschinski"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
@@ -1913,9 +2128,19 @@
         <NamedIndividual IRI="#The400Blows"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#The400BlowsSA16"/>
+        <NamedIndividual IRI="#Tuschinski"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#The400BlowsTH16"/>
         <NamedIndividual IRI="#The400Blows"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#The400BlowsTH16"/>
+        <NamedIndividual IRI="#Tuschinski"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
@@ -1923,9 +2148,19 @@
         <NamedIndividual IRI="#The400Blows"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#The400BlowsTU16"/>
+        <NamedIndividual IRI="#Tuschinski"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#TheBoyBehindTheDoorFR21"/>
         <NamedIndividual IRI="#TheBoyBehindTheDoor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorFR21"/>
+        <NamedIndividual IRI="#Tuschinski"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
@@ -1933,9 +2168,19 @@
         <NamedIndividual IRI="#TheBoyBehindTheDoor"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorMO21"/>
+        <NamedIndividual IRI="#Tuschinski"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#TheBoyBehindTheDoorSA21"/>
         <NamedIndividual IRI="#TheBoyBehindTheDoor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorSA21"/>
+        <NamedIndividual IRI="#Tuschinski"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
@@ -1943,9 +2188,19 @@
         <NamedIndividual IRI="#TheBoyBehindTheDoor"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorSN21"/>
+        <NamedIndividual IRI="#Tuschinski"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#TheBoyBehindTheDoorTH21"/>
         <NamedIndividual IRI="#TheBoyBehindTheDoor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorTH21"/>
+        <NamedIndividual IRI="#Tuschinski"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
@@ -1953,9 +2208,19 @@
         <NamedIndividual IRI="#TheBoyBehindTheDoor"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorTU21"/>
+        <NamedIndividual IRI="#Tuschinski"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#TheBoyBehindTheDoorWE21"/>
         <NamedIndividual IRI="#TheBoyBehindTheDoor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#TheBoyBehindTheDoorWE21"/>
+        <NamedIndividual IRI="#Tuschinski"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
@@ -1973,9 +2238,19 @@
         <NamedIndividual IRI="#TheIntouchables"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#TheIntouchablesFR18"/>
+        <NamedIndividual IRI="#Tuschinski"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#TheIntouchablesMO18"/>
         <NamedIndividual IRI="#TheIntouchables"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#TheIntouchablesMO18"/>
+        <NamedIndividual IRI="#Tuschinski"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
@@ -1983,9 +2258,19 @@
         <NamedIndividual IRI="#TheIntouchables"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#TheIntouchablesSN18"/>
+        <NamedIndividual IRI="#Tuschinski"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#TheIntouchablesWE18"/>
         <NamedIndividual IRI="#TheIntouchables"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#scheduleMovie"/>
+        <NamedIndividual IRI="#TheIntouchablesWE18"/>
+        <NamedIndividual IRI="#Tuschinski"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#locatedIn"/>
