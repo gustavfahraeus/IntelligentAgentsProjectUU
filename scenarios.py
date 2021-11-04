@@ -1,5 +1,4 @@
-scenario1 =
-{
+scenario1 = {
     "user": "Peter",
     "climate": True,
     "transport": 25,
@@ -10,8 +9,7 @@ scenario1 =
     },
 
 }
-scenario2 =
-{
+scenario2 = {
     "user": "Peter",
     "transport": 24,
     "actions": {"restaurant" : 1, "cinema" : 0, "foodstore" : 0},
@@ -20,8 +18,7 @@ scenario2 =
         "pricerange": "Cheap"
     }
 }
-scenario3 =
-{
+scenario3 = {
     "user": "Rebecca",
     "transport": 22,
     "actions": {"restaurant" : 0, "cinema" : 1, "foodstore" : 0},
@@ -33,8 +30,7 @@ scenario3 =
             "finishMovieBefore": (2200, 1.6)
             },
 }
-scenario4=
-{
+scenario4= {
     "user": "Mark",
     "transport": 20,
     "actions": {"restaurant" : 1, "cinema" : 1, "foodstore" : 0},
