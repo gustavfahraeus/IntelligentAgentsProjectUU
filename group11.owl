@@ -361,6 +361,9 @@
         <NamedIndividual IRI="#Cotriade"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Draufel"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Eggplant"/>
     </Declaration>
     <Declaration>
@@ -472,6 +475,9 @@
         <NamedIndividual IRI="#Mackarel"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Mark"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Moderate"/>
     </Declaration>
     <Declaration>
@@ -526,6 +532,9 @@
         <NamedIndividual IRI="#ParasiteWE21"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Peter"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Pizza"/>
     </Declaration>
     <Declaration>
@@ -542,6 +551,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Ratatouille"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rebecca"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#RedLentil"/>
@@ -698,6 +710,12 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Yunak"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Zeist"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ZeistCentrum"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Zucchini"/>
@@ -993,6 +1011,10 @@
         <NamedIndividual IRI="#Cotriade"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Neighbourhood"/>
+        <NamedIndividual IRI="#Draufel"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Transportation"/>
         <NamedIndividual IRI="#ElectricCar"/>
     </ClassAssertion>
@@ -1129,6 +1151,10 @@
         <NamedIndividual IRI="#Mackarel"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#User"/>
+        <NamedIndividual IRI="#Mark"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#PainSymptom"/>
         <NamedIndividual IRI="#MuscleAche"/>
     </ClassAssertion>
@@ -1197,6 +1223,10 @@
         <NamedIndividual IRI="#ParasiteWE21"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#User"/>
+        <NamedIndividual IRI="#Peter"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Meal"/>
         <NamedIndividual IRI="#Pizza"/>
     </ClassAssertion>
@@ -1219,6 +1249,10 @@
     <ClassAssertion>
         <Class IRI="#Meal"/>
         <NamedIndividual IRI="#Ratatouille"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#User"/>
+        <NamedIndividual IRI="#Rebecca"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Vegetable"/>
@@ -1423,6 +1457,14 @@
     <ClassAssertion>
         <Class IRI="#Restaurant"/>
         <NamedIndividual IRI="#Yunak"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#Zeist"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Neighbourhood"/>
+        <NamedIndividual IRI="#ZeistCentrum"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Vegetable"/>
@@ -1664,6 +1706,11 @@
         <NamedIndividual IRI="#FrenchCuisine"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedIn"/>
+        <NamedIndividual IRI="#Draufel"/>
+        <NamedIndividual IRI="#Amsterdam"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#ingredientOf"/>
         <NamedIndividual IRI="#Eggplant"/>
         <NamedIndividual IRI="#Ratatouille"/>
@@ -1899,6 +1946,11 @@
         <NamedIndividual IRI="#Cotriade"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedIn"/>
+        <NamedIndividual IRI="#Mark"/>
+        <NamedIndividual IRI="#Binnenstad"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#MyBigFatGreekWeedingFR18"/>
         <NamedIndividual IRI="#MyBigFatGreekWeeding"/>
@@ -2019,6 +2071,21 @@
         <NamedIndividual IRI="#Rembrandt"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasConstraint"/>
+        <NamedIndividual IRI="#Peter"/>
+        <NamedIndividual IRI="#FishAllergy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasConstraint"/>
+        <NamedIndividual IRI="#Peter"/>
+        <NamedIndividual IRI="#GlutenAllergy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#residesIn"/>
+        <NamedIndividual IRI="#Peter"/>
+        <NamedIndividual IRI="#Draufel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#inCuisine"/>
         <NamedIndividual IRI="#Pizza"/>
         <NamedIndividual IRI="#ItalianCuisine"/>
@@ -2062,6 +2129,11 @@
         <ObjectProperty IRI="#ingredientOf"/>
         <NamedIndividual IRI="#Ratatouille"/>
         <NamedIndividual IRI="#FrenchCuisine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#residesIn"/>
+        <NamedIndividual IRI="#Rebecca"/>
+        <NamedIndividual IRI="#ZeistCentrum"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#containsVitamin"/>
@@ -2439,6 +2511,11 @@
         <NamedIndividual IRI="#TurkishCuisine"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#locatedIn"/>
+        <NamedIndividual IRI="#ZeistCentrum"/>
+        <NamedIndividual IRI="#Zeist"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#containsVitamin"/>
         <NamedIndividual IRI="#Zucchini"/>
         <NamedIndividual IRI="#VitaminA"/>
@@ -2717,6 +2794,11 @@
         <DataProperty IRI="#scheduleMovieTime"/>
         <NamedIndividual IRI="#CocaineCowboysWE18"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inhabitants"/>
+        <NamedIndividual IRI="#Draufel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">14000</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#carbonFootprint"/>
