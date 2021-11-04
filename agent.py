@@ -69,79 +69,86 @@ class Agent:
                         utility = new_utility
 
             #Check pricerange
-            pricerange = res.hasPriceClass
-            if sc["restaurant_pref"]["pricerange"] == pricerange:
-                utility *= 1.2
-                good_reasons.append(" - This restaurant is in the {} pricerange".format(pricerange))
-            else:
-                utility *= 0.8
-                bad_reasons.append(" - This restaurant is in the {} pricerange".format(pricerange))
+            
+            if sc["restaurant_pref"]["pricerange"]:
+                pricerange = res.hasPriceClass
+                if sc["restaurant_pref"]["pricerange"] == pricerange:
+                    utility *= 1.2
+                    good_reasons.append(" - This restaurant is in the {} pricerange".format(pricerange))
+                else:
+                    utility *= 0.8
+                    bad_reasons.append(" - This restaurant is in the {} pricerange".format(pricerange))
 
 
             #Check meals on carbon footprint, allergies and nutrients
-            meals_co2 = []
-            meals_allergy = []
-            meals_protein = []
-            meals_vitamins = []
+            vitamin_deficiencies = self.ontology.search(type = self.ontology.VitaminDeficiency)
+            needed_vitamins = [vitamin_deficiency.needsVitamin for vitamin_deficiency in vitamin_deficiencies if vitamin_deficiency in self.constraints]
+
+            meals = {}
+            meals["scores"] = {}
+            meals["reasons"] = {}
             for meal in cuisine.servesMeal:
-                carbon_footprint = 0
-                meal_contain = False
-                proteins = 0
-                vitamins = set()
+                meal_score = 1
+                meal_good_reasons = []
+                meal_bad_reasons = []
+                meal_carbon_footprint = 0
+                meal_contain_allergy = False
+                meal_proteins = 0
+                meal_vitamins = set()
                 for ing in meal.hasIngredient:
                     if ing.carbonFootprint:
-                        carbon_footprint += ing.carbonFootprint
+                        meal_carbon_footprint += ing.carbonFootprint
                     if ing.containsAllergy:
                         for allergy in ing.containsAllergy:
                             if allergy in self.constraints:
-                                meal_contain = True
+                                meal_contain_allergy = True
                     if ing.gramsOfProteinPerMeal:
-                        proteins += ing.gramsOfProteinPerMeal
+                        meal_proteins += ing.gramsOfProteinPerMeal
                     if ing.containsVitamin:
                         for vitamin in ing.containsVitamin:
-                            vitamins.add(vitamin)
-                       
-                meals_co2.append(carbon_footprint)
-                meals_allergy.append(meal_contain)
-                meals_protein.append(proteins)
-                meals_vitamins.append(vitamins)
+                            meal_vitamins.add(vitamin)
 
-            if climate: 
-                if climate > min(meals_co2):
-                   utility *= 1.5
-                   good_reasons.append(" - This restaurant serves at least one meal with an acceptable carbon footprint")
-                else:
-                   utility *= 0.5
-                   bad_reasons.append(" - This restaurant serves no meals with acceptable caron footprints")
+                if climate:
+                    if meal_carbon_footprint <= 20:
+                        meal_score *= 1.5
+                        meal_good_reasons.append(" a low carbon footprint")
+                    else: 
+                        meal_bad_reasons.append(" a high carbon footprint")
             
-            if meals_allergy:
-                if all(meals_allergy):
-                    utility = 0
+                if meal_contain_allergy:
+                    meal_score = 0
+                
+                if self.ontology.proteinDeficiency in self.constraints:
+                    if 30 <= meal_proteins:
+                        meal_score *= 1.5
+                        meal_good_reasons.append(" a high amount of proteins")
                 else:
-                    good_reasons.append(" - This restaurant can handle your allergy")
+                    meal_score *= 0.5
+                    meal_bad_reasons.append(" a low amount of proteins")
             
-            if self.ontology.proteinDeficiency in self.constraints:
-                if 30 <= max(meals_protein):
-                    utility *= 1.5
-                    good_reasons.append(" - This restaurant serves at least one high protein meal")
-                else:
-                    utility *= 0.5
-                    bad_reasons.append(" - This restaurant serves no high protein meal")
             
-            vitamin_deficiencies = self.ontology.search(type = self.ontology.VitaminDeficiency)
-            needed_vitamins = [vitamin_deficiency.needsVitamin for vitamin_deficiency in vitamin_deficiencies if vitamin_deficiency in self.constraints]
-            if needed_vitamins:
-                right_vitamins = False
-                for meal_vitamins in meals_vitamins:
+                if needed_vitamins:
                     if set(needed_vitamins).issubset(meal_vitamins):
-                        right_vitamins = True
-                        break
-                if right_vitamins:    
-                    utility *= 1.5
-                    good_reasons.append(" - This restaurant serves at least one meal with the right vitamins")
-                else: 
-                    utility *= 0.5
-                    bad_reasons.append(" - This restaurant serves no meal with the right vitamins")
+                        meal_score *= 1.5
+                        meal_good_reasons.append(" the right vitamins")
+                    else: 
+                        meal_score *= 0.5
+                        meal_bad_reasons.append(" does not have the right vitamins")
+            
+                meals["scores"][meal] = meal_score
+                reasons = " - The best meal this restaurant serves has"
+                if meal_good_reasons:
+                    reasons += " and ".join(meal_good_reasons)
+                if meal_bad_reasons:
+                    reasons += " but is has" + " and".join(meal_bad_reasons)
+                meals["reasons"][meal] = reasons
+
+            best_meal, score = max(meals["scores"].items(), key = lambda k : k[1])
+            new_utility = utility * score
+            if new_utility > utility:
+                good_reasons.append(meals["reasons"][best_meal])
+            else:
+                bad_reasons.append(meals["reasons"][best_meal])
 
 
             #Check transportation  
@@ -160,9 +167,7 @@ class Agent:
             else:
                 utility = 0
 
-
-
-
+            
             if utility != 0:
                 restaurant = res.restaurantName
                 options["scores"][restaurant] = utility
@@ -199,8 +204,6 @@ class Agent:
                     bad_reasonsS.append(" - This movie will be on {}".format(date))
                 utilitys = new_utilitys
             #check if movie starts before
-            print(movProg)
-            print(movProg.scheduleMovieTime)
             if movProg.scheduleMovieTime < startBefore:
                 new_utilitys = utilitys * startBeforeV
                 good_reasonsS.append(" - This movie will start before {}".format(startBefore))
@@ -252,8 +255,6 @@ class Agent:
                 movie_program_options["good_reasons"][movProg] = good_reasonsS
                 movie_program_options["bad_reasons"][movProg] = bad_reasonsS
 
-        
-        #end of moviePrograms :(
 
         #.....movies........
         for movie in movies:
@@ -316,46 +317,54 @@ class Agent:
         score_transports = {}          
         score_transports["score"] = {}
         score_transports["reason"] = {}
+        if climate:
+            carbon_footprints = {}
         
         if self.neigh in location:
             #same neighbourhood
             for transport in self.poss_transports:
                 if transport.sameNeighbourhoodDuration:
-                    if (max_duration < transport.sameNeighbourhoodDuration) & (climate > transport.carbonFootprint):
+                    if max_duration < transport.sameNeighbourhoodDuration:
                         score_transports["score"][transport] = 1.5
                         score_transports["reason"][transport] = " - You can {} to this restaurant".format(transport.action)
-                    elif climate > transport.carbonFootprint:
+                    else:
                         score_transports["score"][transport] = 0.8
-                        score_transports["reason"][transport] = " - You can {} to this restaurant, but it takes {} minutes".format(transport.action, transport.sameNeighbourhoodDuration)
-                    elif  max_duration < transport.sameNeighbourhoodDuration:
-                        score_transports["score"][transport] = 0.8
-                        score_transports["reason"][transport] = " - You can {} to this restaurant, but it has a carbon footprint of {}".format(transport.action, transport.carbonFootprint)                  
+                        score_transports["reason"][transport] = " - You can {} to this restaurant, but it takes {} minutes".format(transport.action, transport.sameNeighbourhoodDuration)  
+                    if climate:
+                        carbon_footprints[transport] = transport.carbonFootprint           
                         
         elif self.city in location:
             #same city
             for transport in self.poss_transports:
                 if transport.sameCityDuration:
-                    if (max_duration < transport.sameCityDuration) & (climate > transport.carbonFootprint):
+                    if max_duration < transport.sameCityDuration:
                         score_transports["score"][transport] = 1.5
                         score_transports["reason"][transport] = " - You can {} to this".format(transport.action)
-                    elif climate > transport.carbonFootprint:
+                    else:
                         score_transports["score"][transport] = 0.8
                         score_transports["reason"][transport] = " - You can {} to this, but it takes {} minutes".format(transport.action, transport.sameCityDuration)
-                    elif  max_duration < transport.sameCityDuration:
-                        score_transports["score"][transport] = 0.8
-                        score_transports["reason"][transport] = " - You can {} to this, but it has a carbon footprint of {}".format(transport.action, transport.carbonFootprint)
+                    if climate:
+                        carbon_footprints[transport] = transport.carbonFootprint           
         else:
             #other city
             for transport in self.poss_transports:
                 if transport.otherCityDuration:
-                    if (max_duration < transport.otherCityDuration) & (climate > transport.carbonFootprint):
+                    if max_duration < transport.otherCityDuration:
                         score_transports["score"][transport] = 1.5
-                        score_transports["reason"][transport] = " - You can {} to this".format(transport.action)
-                    elif climate > transport.carbonFootprint:
+                        score_transports["reason"][transport] = " - You can {} to this. ".format(transport.action)
+                    else:
                         score_transports["score"][transport] = 0.8
-                        score_transports["reason"][transport] = " - You can {} to this, but it takes {} minutes".format(transport.action, transport.otherCityDuration)
-                    elif  max_duration < transport.otherCityDuration:
-                        score_transports["score"][transport] = 0.8
-                        score_transports["reason"][transport] = " - You can {} to this, but it has a carbon footprint of {}".format(transport.action, transport.carbonFootprint)         
+                        score_transports["reason"][transport] = " - You can {} to this, but it takes {} minutes. ".format(transport.action, transport.otherCityDuration)
+                    if climate:
+                        carbon_footprints[transport] = transport.carbonFootprint         
         
+        if climate:
+            max_value  = max([transport.carbonFootprint for transport in score_transports["score"].keys()])
+            for transport in score_transports["score"].keys():
+                score_transports["score"][transport] *= 2*transport.carbonFootprint/max_value
+                if transport.carbonFootprint == max_value:
+                    score_transports["reason"][transport] += "This transportation has the lowest carbon footprint"
+                else:
+                    score_transports["reason"][transport] += "But there is a transportation with a lower carbon footprint"
+
         return score_transports
