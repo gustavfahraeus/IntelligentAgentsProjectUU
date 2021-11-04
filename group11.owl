@@ -40,6 +40,9 @@
         <Class IRI="#FinancialConstraint"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Fish"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#FoodItem"/>
     </Declaration>
     <Declaration>
@@ -355,6 +358,9 @@
         <NamedIndividual IRI="#CocaineCowboysWE18"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Cotriade"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Eggplant"/>
     </Declaration>
     <Declaration>
@@ -461,6 +467,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LimitedBudget"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mackarel"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Moderate"/>
@@ -736,6 +745,17 @@
         <Class IRI="#PersonalConstraint"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Fish"/>
+        <Class IRI="#FoodItem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fish"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#containsAllergy"/>
+            <NamedIndividual IRI="#FishAllergy"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#FoodPreference"/>
         <Class IRI="#PersonalConstraint"/>
     </SubClassOf>
@@ -969,6 +989,10 @@
         <NamedIndividual IRI="#CocaineCowboysWE18"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Meal"/>
+        <NamedIndividual IRI="#Cotriade"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Transportation"/>
         <NamedIndividual IRI="#ElectricCar"/>
     </ClassAssertion>
@@ -1099,6 +1123,10 @@
     <ClassAssertion>
         <Class IRI="#FinancialConstraint"/>
         <NamedIndividual IRI="#LimitedBudget"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fish"/>
+        <NamedIndividual IRI="#Mackarel"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#PainSymptom"/>
@@ -1389,6 +1417,10 @@
         <NamedIndividual IRI="#VitaminC"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Vegetable"/>
+        <NamedIndividual IRI="#YellowOnion"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Restaurant"/>
         <NamedIndividual IRI="#Yunak"/>
     </ClassAssertion>
@@ -1627,6 +1659,11 @@
         <NamedIndividual IRI="#Kinepolis"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#inCuisine"/>
+        <NamedIndividual IRI="#Cotriade"/>
+        <NamedIndividual IRI="#FrenchCuisine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#ingredientOf"/>
         <NamedIndividual IRI="#Eggplant"/>
         <NamedIndividual IRI="#Ratatouille"/>
@@ -1852,6 +1889,16 @@
         <NamedIndividual IRI="#Tolsteeg"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#containsAllergy"/>
+        <NamedIndividual IRI="#Mackarel"/>
+        <NamedIndividual IRI="#FishAllergy"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ingredientOf"/>
+        <NamedIndividual IRI="#Mackarel"/>
+        <NamedIndividual IRI="#Cotriade"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#presentingMovie"/>
         <NamedIndividual IRI="#MyBigFatGreekWeedingFR18"/>
         <NamedIndividual IRI="#MyBigFatGreekWeeding"/>
@@ -2000,6 +2047,11 @@
         <ObjectProperty IRI="#ingredientOf"/>
         <NamedIndividual IRI="#Potato"/>
         <NamedIndividual IRI="#ChickenConfit"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ingredientOf"/>
+        <NamedIndividual IRI="#Potato"/>
+        <NamedIndividual IRI="#Cotriade"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#ingredientOf"/>
@@ -2365,6 +2417,11 @@
         <ObjectProperty IRI="#ingredientOf"/>
         <NamedIndividual IRI="#YellowOnion"/>
         <NamedIndividual IRI="#ChorbaSoup"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#ingredientOf"/>
+        <NamedIndividual IRI="#YellowOnion"/>
+        <NamedIndividual IRI="#Cotriade"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#ingredientOf"/>
@@ -2930,6 +2987,16 @@
         <DataProperty IRI="#duration"/>
         <NamedIndividual IRI="#Lidl"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#carbonFootprint"/>
+        <NamedIndividual IRI="#Mackarel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#gramsOfProteinPerMeal"/>
+        <NamedIndividual IRI="#Mackarel"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#duration"/>
