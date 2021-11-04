@@ -111,40 +111,40 @@ class Agent:
                 if climate:
                     if meal_carbon_footprint <= 20:
                         meal_score *= 1.5
-                        meal_good_reasons.append(" a low carbon footprint")
+                        meal_good_reasons.append("a low carbon footprint")
                     else: 
                         meal_score *= 0.7
-                        meal_bad_reasons.append(" a high carbon footprint")
+                        meal_bad_reasons.append("a high carbon footprint")
             
                 if meal_contain_allergy:
                     meal_score = 0
                 else:
-                    meal_good_reasons.append(" does not affect your allergy(ies)")
+                    meal_good_reasons.append("does not affect your allergy(ies)")
                 
                 if self.ontology.proteinDeficiency in self.constraints:
                     if 30 <= meal_proteins:
                         meal_score *= 1.5
-                        meal_good_reasons.append(" a high amount of proteins")
+                        meal_good_reasons.append("a high amount of proteins")
                     else:
                         meal_score *= 0.5
-                        meal_bad_reasons.append(" a low amount of proteins")
+                        meal_bad_reasons.append("a low amount of proteins")
             
             
                 if needed_vitamins:
                     if set(needed_vitamins).issubset(meal_vitamins):
                         meal_score *= 1.5
-                        meal_good_reasons.append(" the right vitamins")
+                        meal_good_reasons.append("the right vitamins")
                     else: 
                         meal_score *= 0.5
-                        meal_bad_reasons.append(" does not have the right vitamins")
+                        meal_bad_reasons.append("does not have the right vitamins")
             
                 meals["scores"][meal] = meal_score
                 if meal_good_reasons or meal_bad_reasons:
-                    reasons = " - The best meal this restaurant serves has: "
+                    reasons = " - The best meal this restaurant serves has "
                     if meal_good_reasons:
                         reasons += " and ".join(meal_good_reasons)
                     if meal_bad_reasons:
-                        reasons += " but it" + " and".join(meal_bad_reasons)
+                        reasons += " but it " + " and ".join(meal_bad_reasons)
                     meals["reasons"][meal] = reasons
                 else:
                     meals["reasons"][meal] = " - This restaurant has okay meals"
