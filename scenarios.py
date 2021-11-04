@@ -11,7 +11,8 @@ scenario1 = {
 }
 scenario2 = {
     "user": "Peter",
-    "transport": 24,
+    "climate": False,
+    "transport": 25,
     "actions": {"restaurant" : 1, "cinema" : 0, "foodstore" : 0},
     "restaurant_pref":
     {
@@ -20,6 +21,7 @@ scenario2 = {
 }
 scenario3 = {
     "user": "Rebecca",
+    "climate": False,
     "transport": 22,
     "actions": {"restaurant" : 0, "cinema" : 1, "foodstore" : 0},
     "movie_pref":
@@ -32,6 +34,7 @@ scenario3 = {
 }
 scenario4= {
     "user": "Mark",
+    "climate": False,
     "transport": 20,
     "actions": {"restaurant" : 1, "cinema" : 1, "foodstore" : 0},
     "restaurant_pref":
@@ -46,13 +49,13 @@ scenario4= {
 }
 
 
-""" scenario5 = {   "user": "Alice",
+scenario5 = {   "user": "Alice",
                 "climate": True,
                 "transport": 20,
                 "actions": {"cinema" : 1, "restaurant" : 0, "foodstore" : 0},
                 "day": "monday",
                 "movie_pref":
-                    {   "genre": {"scary": 0.2, "french": 0.7, "romantic": 2, "comedy": 2, "drama": 0.7, "superhero": 0.1},
+                    {   "genre": {"scary": 0.2, "french": 0.7, "romantic": 2, "comedy": 2},
                         "date": ("Tuesday", 1.5),
                         "startMovieBefore": (2000, 2.0),
                         "startMovieAfter": (1700, 1.5),
@@ -61,4 +64,4 @@ scenario4= {
                 "restaurant_pref":
                     {   "cuisine": {"ItalianCuisine" : 1.5, "FrenchCuisine": 0.8, "TurkishCuisine": 0.5},
                         "pricerange": "Moderate",        }   }
-"""
+

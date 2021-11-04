@@ -37,40 +37,40 @@ class Agent:
             utility = 1
             good_reasons = []
             bad_reasons = []
+            cuisine = res.servesCuisine
 
             #Check Cuisines
-            cuisine = res.servesCuisine
-            for key, value in sc["restaurant_pref"]["cuisine"].items():
-                if key == "ItalianCuisine":
-                    if cuisine == self.ontology.ItalianCuisine:
-                        new_utility = value * utility
-                        if new_utility > utility:
-                            good_reasons.append(" - This restaurant has an Italian Cuisine")
-                        if new_utility < utility:
-                            bad_reasons.append(" - This restaurant has an Italian Cuisine")
-                        utility = new_utility
+            if "cuisine" in sc["restaurant_pref"].keys():
+                for key, value in sc["restaurant_pref"]["cuisine"].items():
+                    if key == "ItalianCuisine":
+                        if cuisine == self.ontology.ItalianCuisine:
+                            new_utility = value * utility
+                            if new_utility > utility:
+                                good_reasons.append(" - This restaurant has an Italian Cuisine")
+                            if new_utility < utility:
+                                bad_reasons.append(" - This restaurant has an Italian Cuisine")
+                            utility = new_utility
 
-                if key == "FrenchCuisine":
-                    if cuisine == self.ontology.FrenchCuisine:
-                        new_utility = value * utility                      
-                        if new_utility > utility:
-                            good_reasons.append(" - This restaurant has an French Cuisine")
-                        if new_utility < utility:
-                            bad_reasons.append(" - This restaurant has an French Cuisine")
-                        utility = new_utility
+                    if key == "FrenchCuisine":
+                        if cuisine == self.ontology.FrenchCuisine:
+                            new_utility = value * utility                      
+                            if new_utility > utility:
+                                good_reasons.append(" - This restaurant has an French Cuisine")
+                            if new_utility < utility:
+                                bad_reasons.append(" - This restaurant has an French Cuisine")
+                            utility = new_utility
 
-                if key == "TurkishCuisine":
-                    if cuisine == self.ontology.TurkishCuisine:
-                        new_utility = value * utility                       
-                        if new_utility > utility:
-                            good_reasons.append(" - This restaurant has an Turkish Cuisine")
-                        if new_utility < utility:
-                            good_reasons.append(" - This restaurant has an Turkish Cuisine")
-                        utility = new_utility
+                    if key == "TurkishCuisine":
+                        if cuisine == self.ontology.TurkishCuisine:
+                            new_utility = value * utility                       
+                            if new_utility > utility:
+                                good_reasons.append(" - This restaurant has an Turkish Cuisine")
+                            if new_utility < utility:
+                                good_reasons.append(" - This restaurant has an Turkish Cuisine")
+                            utility = new_utility
 
             #Check pricerange
-            
-            if sc["restaurant_pref"]["pricerange"]:
+            if "pricerange" in sc["restaurant_pref"].keys():
                 pricerange = res.hasPriceClass
                 if sc["restaurant_pref"]["pricerange"] == pricerange:
                     utility *= 1.2
@@ -113,18 +113,21 @@ class Agent:
                         meal_score *= 1.5
                         meal_good_reasons.append(" a low carbon footprint")
                     else: 
+                        meal_score *= 0.7
                         meal_bad_reasons.append(" a high carbon footprint")
             
                 if meal_contain_allergy:
                     meal_score = 0
+                else:
+                    meal_good_reasons.append(" does not affect your allergy(ies)")
                 
                 if self.ontology.proteinDeficiency in self.constraints:
                     if 30 <= meal_proteins:
                         meal_score *= 1.5
                         meal_good_reasons.append(" a high amount of proteins")
-                else:
-                    meal_score *= 0.5
-                    meal_bad_reasons.append(" a low amount of proteins")
+                    else:
+                        meal_score *= 0.5
+                        meal_bad_reasons.append(" a low amount of proteins")
             
             
                 if needed_vitamins:
@@ -136,19 +139,24 @@ class Agent:
                         meal_bad_reasons.append(" does not have the right vitamins")
             
                 meals["scores"][meal] = meal_score
-                reasons = " - The best meal this restaurant serves has"
-                if meal_good_reasons:
-                    reasons += " and ".join(meal_good_reasons)
-                if meal_bad_reasons:
-                    reasons += " but is has" + " and".join(meal_bad_reasons)
-                meals["reasons"][meal] = reasons
+                if meal_good_reasons or meal_bad_reasons:
+                    reasons = " - The best meal this restaurant serves has: "
+                    if meal_good_reasons:
+                        reasons += " and ".join(meal_good_reasons)
+                    if meal_bad_reasons:
+                        reasons += " but it" + " and".join(meal_bad_reasons)
+                    meals["reasons"][meal] = reasons
+                else:
+                    meals["reasons"][meal] = " - This restaurant has okay meals"
+
 
             best_meal, score = max(meals["scores"].items(), key = lambda k : k[1])
-            new_utility = utility * score
-            if new_utility > utility:
+            new_utility = utility * score            
+            if new_utility >= utility:
                 good_reasons.append(meals["reasons"][best_meal])
             else:
                 bad_reasons.append(meals["reasons"][best_meal])
+            utility = new_utility
 
 
             #Check transportation  
@@ -157,19 +165,24 @@ class Agent:
                 max_uti = max(score_transports["score"].values())
                 max_transports = [trans for (trans, score) in score_transports["score"].items() if score == max_uti]
                 new_utility = utility*max_uti
-                if new_utility > utility:
+                if new_utility > utility:                    
+                    good_trans = []
                     for trans in max_transports:
-                        good_reasons.append(score_transports["reason"][trans])
+                        good_trans.append(score_transports["reason"][trans])
+                    good_reasons.append(" - You can " + " or ".join(good_trans) + " to this restaurant.")
                 else:
+                    bad_trans = []
                     for trans in max_transports:
-                        bad_reasons.append(score_transports["reason"][trans])
+                        bad_trans.append(score_transports["reason"][trans])
+                    bad_reasons.append(" - You can " + " or ".join(bad_trans) + " to this restaurant.")
                 utility = new_utility
             else:
                 utility = 0
 
             
             if utility != 0:
-                restaurant = res.restaurantName
+                location = [loc.cityName for loc in res.locatedIn]
+                restaurant = res.restaurantName + " located in " + ", ".join(location)
                 options["scores"][restaurant] = utility
                 options["good_reasons"][restaurant] = good_reasons
                 options["bad_reasons"][restaurant] = bad_reasons
@@ -191,9 +204,18 @@ class Agent:
             bad_reasonsS = []
 
             date, dateV = sc["movie_pref"]["date"]
-            startBefore, startBeforeV=sc["movie_pref"]["startMovieBefore"]
-            startAfter, startAfterV=sc["movie_pref"]["startMovieAfter"]
-            finishBefore, finishBeforeV=sc["movie_pref"]["finishMovieBefore"]
+            if "startMovieBefore" in sc["movie_pref"].keys():
+                startBefore, startBeforeV=sc["movie_pref"]["startMovieBefore"]
+            else:
+                startBefore = None
+            if "startMovieAfter" in sc["movie_pref"]:
+                startAfter, startAfterV=sc["movie_pref"]["startMovieAfter"]
+            else: 
+                startAfter = None
+            if "finishMovieBefore" in sc["movie_pref"]:
+                finishBefore, finishBeforeV=sc["movie_pref"]["finishMovieBefore"]
+            else: 
+                finishBefore = None
 
             #check the day if correct
             if movProg.dayScheduleMovie == date:  #if the day is same
@@ -204,34 +226,36 @@ class Agent:
                     bad_reasonsS.append(" - This movie will be on {}".format(date))
                 utilitys = new_utilitys
             #check if movie starts before
-            if movProg.scheduleMovieTime < startBefore:
-                new_utilitys = utilitys * startBeforeV
-                good_reasonsS.append(" - This movie will start before {}".format(startBefore))
-                utilitys = new_utilitys
-            else:
-                new_utilitys = utilitys * (2-startBeforeV)
-                bad_reasonsS.append(" - This movie will start before {}".format(startBefore))
-                utilitys = new_utilitys
+            if startBefore:
+                if movProg.scheduleMovieTime < startBefore:
+                    new_utilitys = utilitys * startBeforeV
+                    good_reasonsS.append(" - This movie will start before {}".format(startBefore))
+                    utilitys = new_utilitys
+                else:
+                    new_utilitys = utilitys * (2-startBeforeV)
+                    bad_reasonsS.append(" - This movie will not start before {}".format(startBefore))
+                    utilitys = new_utilitys
             #check if movie starts after
-            if movProg.scheduleMovieTime > startAfter:
-                new_utilitys = utilitys * startAfterV
-                good_reasonsS.append(" - This movie will start after {}".format(startAfter))
-                utilitys = new_utilitys
-            else:
-                new_utilitys = utilitys * (2-startAfterV)
-                bad_reasonsS.append(" - This movie will start after {}".format(startAfter))
-                utilitys = new_utilitys
+            if startAfter:
+                if movProg.scheduleMovieTime > startAfter:
+                    new_utilitys = utilitys * startAfterV
+                    good_reasonsS.append(" - This movie will start after {}".format(startAfter))
+                    utilitys = new_utilitys
+                else:
+                    new_utilitys = utilitys * (2-startAfterV)
+                    bad_reasonsS.append(" - This movie will not start after {}".format(startAfter))
+                    utilitys = new_utilitys
             #evaluate duration of movie with time
-            for m in movies:    #have to take movie property duration, to compare with moviePrograms
-                if movProg.presentingMovie == m:   #IMPORTANT: CHECK CONNECTION! BETWEEN MOVIE AND MOVIEPROGRAM    movProg.name == m
-                    if movProg.scheduleMovieTime+m.duration < finishBefore:
-                        new_utilitys = utilitys * finishBeforeV
-                        good_reasonsS.append(" - This movie will end before {}".format(finishBefore))
-                        utilitys = new_utilitys
-                    else:
-                        new_utilitys = utilitys * (2-finishBeforeV)
-                        bad_reasonsS.append(" - This movie will not end before {}".format(finishBefore))
-                        utilitys = new_utilitys
+            if finishBefore:
+                m = movProg.presentingMovie
+                if movProg.scheduleMovieTime+m.duration < finishBefore:
+                    new_utilitys = utilitys * finishBeforeV
+                    good_reasonsS.append(" - This movie will end before {}".format(finishBefore))
+                    utilitys = new_utilitys
+                else:
+                    new_utilitys = utilitys * (2-finishBeforeV)
+                    bad_reasonsS.append(" - This movie will not end before {}".format(finishBefore))
+                    utilitys = new_utilitys
 
             #Check transportation  
             score_transports = self.check_transportation(sc["transport"], sc["climate"], movProg.scheduleMovie.locatedIn)            
@@ -239,12 +263,16 @@ class Agent:
                 max_uti = max(score_transports["score"].values())
                 max_transports = [trans for (trans, score) in score_transports["score"].items() if score == max_uti]
                 new_utility = utilitys*max_uti
-                if new_utility > utilitys:
+                if new_utility > utilitys:                    
+                    good_trans = []
                     for trans in max_transports:
-                        good_reasonsS.append(score_transports["reason"][trans])
+                        good_trans.append(score_transports["reason"][trans])
+                    good_reasonsS.append(" - You can " + " or ".join(good_trans) + " to this cinema.")
                 else:
+                    bad_trans = []
                     for trans in max_transports:
-                        bad_reasonsS.append(score_transports["reason"][trans])
+                        bad_trans.append(score_transports["reason"][trans])
+                    bad_reasonsS.append(" - You can " + " or ".join(bad_trans)  + " to this cinema.")
                 utilitys = new_utility
             else:
                 utility = 0
@@ -274,24 +302,25 @@ class Agent:
 
             #Check for duration
             duration = movie.duration
-            if sc["movie_pref"]["duration"] == "short":
-                if duration <= 90:
-                    utility *= 1.7
-                    good_reasons.append(" - The duration of this movie is {}, which is a short movie".format(duration))
-                if duration > 120:
-                    utility *= 0.4
-                    bad_reasons.append(" - The duration of this movie is {}, which is a long movie".format(duration))
-            if sc["movie_pref"]["duration"] == "average":
-                if duration > 90 & duration <= 120:
-                    utility *= 1.7
-                    good_reasons.append(" - The duration of this movie is {}, which is a average movie".format(duration))
-            if sc["movie_pref"]["duration"] == "long":
-                if duration <= 90:
-                    utility *= 0.4
-                    bad_reasons.append(" - The duration of this movie is {}, which is a short movie".format(duration))
-                if duration > 120:
-                    utility *= 1.7
-                    good_reasons.append(" - The duration of this movie is {}, which is a long movie".format(duration))
+            if "duration" in sc["movie_pref"].keys():
+                if sc["movie_pref"]["duration"] == "short":
+                    if duration <= 90:
+                        utility *= 1.7
+                        good_reasons.append(" - The duration of this movie is {}, which is a short movie".format(duration))
+                    if duration > 120:
+                        utility *= 0.4
+                        bad_reasons.append(" - The duration of this movie is {}, which is a long movie".format(duration))
+                if sc["movie_pref"]["duration"] == "average":
+                    if duration > 90 & duration <= 120:
+                        utility *= 1.7
+                        good_reasons.append(" - The duration of this movie is {}, which is a average movie".format(duration))
+                if sc["movie_pref"]["duration"] == "long":
+                    if duration <= 90:
+                        utility *= 0.4
+                        bad_reasons.append(" - The duration of this movie is {}, which is a short movie".format(duration))
+                    if duration > 120:
+                        utility *= 1.7
+                        good_reasons.append(" - The duration of this movie is {}, which is a long movie".format(duration))
 
 
             #Adding movie to the options
@@ -304,8 +333,7 @@ class Agent:
         options = {"scores" : {}, "good_reasons": {}, "bad_reasons": {}}
         for movie_program in movie_program_options["scores"].keys():
             movie = movie_program.presentingMovie
-            #option = "{} played in {} at {}, {}".format(movie.nameMovie, movie_program.scheduleMovie.CinemaName, movie_program.dayScheduleMovie, movie_program.timeSchedaleMovie)
-            option = "{} played in at {}, {}".format(movie.nameMovie, movie_program.dayScheduleMovie, movie_program.scheduleMovieTime)
+            option = "{} played in {} at {}, {}".format(movie.nameMovie, movie_program.scheduleMovie.cinemaName, movie_program.dayScheduleMovie, movie_program.scheduleMovieTime)
             options["scores"][option] = movie_options["scores"][movie] * movie_program_options["scores"][movie_program]
             options["good_reasons"][option] = movie_options["good_reasons"][movie] + movie_program_options["good_reasons"][movie_program]
             options["bad_reasons"][option] = movie_options["bad_reasons"][movie] + movie_program_options["bad_reasons"][movie_program]
@@ -326,10 +354,10 @@ class Agent:
                 if transport.sameNeighbourhoodDuration:
                     if max_duration < transport.sameNeighbourhoodDuration:
                         score_transports["score"][transport] = 1.5
-                        score_transports["reason"][transport] = " - You can {} to this restaurant".format(transport.action)
+                        score_transports["reason"][transport] = transport.action
                     else:
                         score_transports["score"][transport] = 0.8
-                        score_transports["reason"][transport] = " - You can {} to this restaurant, but it takes {} minutes".format(transport.action, transport.sameNeighbourhoodDuration)  
+                        score_transports["reason"][transport] = "{}, but it takes {} minutes".format(transport.action, transport.sameNeighbourhoodDuration)  
                     if climate:
                         carbon_footprints[transport] = transport.carbonFootprint           
                         
@@ -339,10 +367,10 @@ class Agent:
                 if transport.sameCityDuration:
                     if max_duration < transport.sameCityDuration:
                         score_transports["score"][transport] = 1.5
-                        score_transports["reason"][transport] = " - You can {} to this".format(transport.action)
+                        score_transports["reason"][transport] = transport.action
                     else:
                         score_transports["score"][transport] = 0.8
-                        score_transports["reason"][transport] = " - You can {} to this, but it takes {} minutes".format(transport.action, transport.sameCityDuration)
+                        score_transports["reason"][transport] = "{}, but it takes {} minutes".format(transport.action, transport.sameCityDuration)
                     if climate:
                         carbon_footprints[transport] = transport.carbonFootprint           
         else:
@@ -350,21 +378,22 @@ class Agent:
             for transport in self.poss_transports:
                 if transport.otherCityDuration:
                     if max_duration < transport.otherCityDuration:
-                        score_transports["score"][transport] = 1.5
-                        score_transports["reason"][transport] = " - You can {} to this. ".format(transport.action)
+                        score_transports["score"][transport] = 1.2
+                        score_transports["reason"][transport] = transport.action
                     else:
                         score_transports["score"][transport] = 0.8
-                        score_transports["reason"][transport] = " - You can {} to this, but it takes {} minutes. ".format(transport.action, transport.otherCityDuration)
+                        score_transports["reason"][transport] = "{}, but it takes {} minutes".format(transport.action, transport.otherCityDuration)
                     if climate:
                         carbon_footprints[transport] = transport.carbonFootprint         
         
         if climate:
             max_value  = max([transport.carbonFootprint for transport in score_transports["score"].keys()])
+            min_value  = min([transport.carbonFootprint for transport in score_transports["score"].keys()])
             for transport in score_transports["score"].keys():
-                score_transports["score"][transport] *= 2*transport.carbonFootprint/max_value
-                if transport.carbonFootprint == max_value:
-                    score_transports["reason"][transport] += "This transportation has the lowest carbon footprint"
+                score_transports["score"][transport] *= 2 - (2*transport.carbonFootprint/max_value)
+                if transport.carbonFootprint == min_value:
+                    score_transports["reason"][transport] += ", this transportation has the lowest carbon footprint"
                 else:
-                    score_transports["reason"][transport] += "But there is a transportation with a lower carbon footprint"
+                    score_transports["reason"][transport] += ", but there is a transportation with a lower carbon footprint"
 
         return score_transports

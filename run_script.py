@@ -1,10 +1,9 @@
 from agent import Agent
 from scenarios import *
-import operator
 
 def main():
     agent = Agent()
-    scenario = scenario1
+    scenario = scenario2
     actions = {}
 
     agent.get_user(scenario["user"])
@@ -15,8 +14,8 @@ def main():
     if scenario["actions"]["restaurant"] == 1:
         actions["restaurant"] = agent.get_restaurants(scenario)
 
-    if scenario["actions"]["foodstore"] == 1:
-        actions["food store"] = agent.get_foodstores(scenario)
+    #if scenario["actions"]["foodstore"] == 1:
+    #    actions["food store"] = agent.get_foodstores(scenario)
 
     for action, options in actions.items():
         scores = options["scores"]

@@ -187,6 +187,9 @@
         <DataProperty IRI="#carbonFootprint"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#cinemaName"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#cityName"/>
     </Declaration>
     <Declaration>
@@ -1946,7 +1949,7 @@
         <NamedIndividual IRI="#Cotriade"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#locatedIn"/>
+        <ObjectProperty IRI="#residesIn"/>
         <NamedIndividual IRI="#Mark"/>
         <NamedIndividual IRI="#Binnenstad"/>
     </ObjectPropertyAssertion>
@@ -2556,6 +2559,11 @@
         <Literal>Alice</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#cityName"/>
+        <NamedIndividual IRI="#Amsterdam"/>
+        <Literal>Amsterdam</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#duration"/>
         <NamedIndividual IRI="#Batman"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">95</Literal>
@@ -2644,6 +2652,11 @@
         <DataProperty IRI="#sameNeighbourhoodDuration"/>
         <NamedIndividual IRI="#Biking"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#cityName"/>
+        <NamedIndividual IRI="#Binnenstad"/>
+        <Literal>Binnenstad</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#carbonFootprint"/>
@@ -2796,6 +2809,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#cityName"/>
+        <NamedIndividual IRI="#Draufel"/>
+        <Literal>Draufel</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#inhabitants"/>
         <NamedIndividual IRI="#Draufel"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">14000</Literal>
@@ -2924,6 +2942,11 @@
         <DataProperty IRI="#duration"/>
         <NamedIndividual IRI="#Jumbo"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#cinemaName"/>
+        <NamedIndividual IRI="#Kinepolis"/>
+        <Literal>Kinepolis</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#duration"/>
@@ -3056,6 +3079,11 @@
         <Literal>Le Jardin</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#cityName"/>
+        <NamedIndividual IRI="#Leidseplein"/>
+        <Literal>Leidseplein</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#carbonFootprint"/>
         <NamedIndividual IRI="#Lettuce"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
@@ -3171,6 +3199,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1800</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#cityName"/>
+        <NamedIndividual IRI="#Noordoost"/>
+        <Literal>Noord-Oost</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#duration"/>
         <NamedIndividual IRI="#Parasite"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">120</Literal>
@@ -3276,6 +3309,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#cinemaName"/>
+        <NamedIndividual IRI="#Rembrandt"/>
+        <Literal>Rembrandt</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#action"/>
         <NamedIndividual IRI="#RideSharing"/>
         <Literal>ride share</Literal>
@@ -3354,6 +3392,11 @@
         <DataProperty IRI="#scheduleMovieTime"/>
         <NamedIndividual IRI="#SchumacherTU16"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1600</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#cityName"/>
+        <NamedIndividual IRI="#SciencePark"/>
+        <Literal>Science Park</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#carbonFootprint"/>
@@ -3636,6 +3679,11 @@
         <Literal>The Istanbul</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#cityName"/>
+        <NamedIndividual IRI="#Tolsteeg"/>
+        <Literal>Tolsteeg</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#carbonFootprint"/>
         <NamedIndividual IRI="#Tomato"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
@@ -3676,6 +3724,16 @@
         <Literal>Turkisch Taste</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#cinemaName"/>
+        <NamedIndividual IRI="#Tuschinski"/>
+        <Literal>Tuschinski</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#cityName"/>
+        <NamedIndividual IRI="#Utrecht"/>
+        <Literal>Utrecht</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#hasPriceClass"/>
         <NamedIndividual IRI="#Yunak"/>
         <Literal>Moderate</Literal>
@@ -3684,6 +3742,11 @@
         <DataProperty IRI="#restaurantName"/>
         <NamedIndividual IRI="#Yunak"/>
         <Literal>Yunak</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#cityName"/>
+        <NamedIndividual IRI="#ZeistCentrum"/>
+        <Literal>Centrum</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#carbonFootprint"/>
@@ -3914,6 +3977,9 @@
         <DataProperty IRI="#carbonFootprint"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
+        <DataProperty IRI="#cinemaName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
         <DataProperty IRI="#cityName"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
@@ -3995,8 +4061,15 @@
         </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#cinemaName"/>
+        <Class IRI="#Cinema"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#cityName"/>
-        <Class IRI="#City"/>
+        <ObjectUnionOf>
+            <Class IRI="#City"/>
+            <Class IRI="#Neighbourhood"/>
+        </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#costTravel"/>
@@ -4101,6 +4174,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#carbonFootprint"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#cinemaName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#cityName"/>
