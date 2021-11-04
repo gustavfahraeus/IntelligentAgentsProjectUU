@@ -40,8 +40,11 @@ def main():
             if options["bad_reasons"][good_options[1]]:
                 print("But it is not a perfect option, because:")
                 print(*options["bad_reasons"][good_options[1]], sep = "\n")
+            
+            print("\n")
         else:
-            print("There are no good options for your preferences")
+            print("There are no good {} for your preferences".format(action))
+            print("\n")
 
 if __name__ == "__main__":
     main()
